@@ -108,12 +108,9 @@ public class AplikacjaMW050116MainClass {
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabelImage=new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/tlo_640_480.jpg"));
 		
-		JComboBox comboBox_1 = new JComboBox();
-		comboBox_1.addContainerListener(new ContainerAdapter() {
-			@Override
-			public void componentAdded(ContainerEvent arg0) {
-			}
-		});
+		String[] championNames = { "Abathur","Abathur2","Abathur","Abathur","Abathur","Abathur","Abathur","Abathur","Abathur","Abathur" };
+		
+		JComboBox comboBox_1 = new JComboBox(championNames);
 		comboBox_1.setBounds(36, 83, 106, 20);
 		panelMainMenu.add(comboBox_1);
 		
