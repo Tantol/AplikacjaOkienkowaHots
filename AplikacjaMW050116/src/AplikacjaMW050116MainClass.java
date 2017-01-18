@@ -188,9 +188,17 @@ public class AplikacjaMW050116MainClass {
 		panelMenuMap.add(btnHauntedMines);
 		
 		JButton btnTowersOfDoom = new JButton("Towers of Doom");
+		btnTowersOfDoom.addMouseListener(new MouseAdapter() {
+			public void mouseEntered(MouseEvent arg0) {
+				addBackgroundMap(btnTowersOfDoom.getName());
+				label.setIcon(labelImage);
+			}
+		});
 		btnTowersOfDoom.setName("Towers of Doom");
 		btnTowersOfDoom.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				addBackgroundMenu(btnTowersOfDoom.getName());
+				lblNewLabel.setIcon(lblNewLabelImage);
 				panelMenuMap.setVisible(false);
 				panelMainMenu.setVisible(true);
 				btnChooseMap.setText("Towers of Doom");
@@ -201,9 +209,17 @@ public class AplikacjaMW050116MainClass {
 		panelMenuMap.add(btnTowersOfDoom);
 		
 		JButton btnInfernalShrines = new JButton("Infernal Shrines");
+		btnInfernalShrines.addMouseListener(new MouseAdapter() {
+			public void mouseEntered(MouseEvent e) {
+				addBackgroundMap(btnInfernalShrines.getName());
+				label.setIcon(labelImage);
+			}
+		});
 		btnInfernalShrines.setName("Infernal Shrines");
 		btnInfernalShrines.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				addBackgroundMenu(btnInfernalShrines.getName());
+				lblNewLabel.setIcon(lblNewLabelImage);
 				panelMenuMap.setVisible(false);
 				panelMainMenu.setVisible(true);
 				btnChooseMap.setText("Infernal Shrines");
@@ -214,9 +230,17 @@ public class AplikacjaMW050116MainClass {
 		panelMenuMap.add(btnInfernalShrines);
 		
 		JButton btnBattlefieldOfEternity = new JButton("Battlefield of Eternity");
+		btnBattlefieldOfEternity.addMouseListener(new MouseAdapter() {
+			public void mouseEntered(MouseEvent e) {
+				addBackgroundMap(btnBattlefieldOfEternity.getName());
+				label.setIcon(labelImage);
+			}
+		});
 		btnBattlefieldOfEternity.setName("Battlefield of Eternity");
 		btnBattlefieldOfEternity.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				addBackgroundMenu(btnBattlefieldOfEternity.getName());
+				lblNewLabel.setIcon(lblNewLabelImage);
 				panelMenuMap.setVisible(false);
 				panelMainMenu.setVisible(true);
 				btnChooseMap.setText("Battlefield of Eternity");
@@ -227,9 +251,17 @@ public class AplikacjaMW050116MainClass {
 		panelMenuMap.add(btnBattlefieldOfEternity);
 		
 		JButton btnTombOfThe = new JButton("Tomb of The Spider Quoeen");
+		btnTombOfThe.addMouseListener(new MouseAdapter() {
+			public void mouseEntered(MouseEvent e) {
+				addBackgroundMap(btnTombOfThe.getName());
+				label.setIcon(labelImage);
+			}
+		});
 		btnTombOfThe.setName("Tomb of The Spider Quoeen");
 		btnTombOfThe.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				addBackgroundMenu(btnTombOfThe.getName());
+				lblNewLabel.setIcon(lblNewLabelImage);
 				panelMenuMap.setVisible(false);
 				panelMainMenu.setVisible(true);
 				btnChooseMap.setText("Tomb of The Spider Quoeen");
@@ -240,9 +272,17 @@ public class AplikacjaMW050116MainClass {
 		panelMenuMap.add(btnTombOfThe);
 		
 		JButton btnSkyTemple = new JButton("Sky Temple");
+		btnSkyTemple.addMouseListener(new MouseAdapter() {
+			public void mouseEntered(MouseEvent e) {
+				addBackgroundMap(btnSkyTemple.getName());
+				label.setIcon(labelImage);
+			}
+		});
 		btnSkyTemple.setName("Sky Temple");
 		btnSkyTemple.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				addBackgroundMenu(btnSkyTemple.getName());
+				lblNewLabel.setIcon(lblNewLabelImage);
 				panelMenuMap.setVisible(false);
 				panelMainMenu.setVisible(true);
 				btnChooseMap.setText("Sky Temple");
@@ -253,9 +293,17 @@ public class AplikacjaMW050116MainClass {
 		panelMenuMap.add(btnSkyTemple);
 		
 		JButton btnGardenOfTerror = new JButton("Garden of Terror");
+		btnGardenOfTerror.addMouseListener(new MouseAdapter() {
+			public void mouseEntered(MouseEvent e) {
+				addBackgroundMap(btnGardenOfTerror.getName());
+				label.setIcon(labelImage);
+			}
+		});
 		btnGardenOfTerror.setName("Garden of Terror");
 		btnGardenOfTerror.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				addBackgroundMenu(btnGardenOfTerror.getName());
+				lblNewLabel.setIcon(lblNewLabelImage);
 				panelMenuMap.setVisible(false);
 				panelMainMenu.setVisible(true);
 				btnChooseMap.setText("Garden of Terror");
@@ -266,9 +314,17 @@ public class AplikacjaMW050116MainClass {
 		panelMenuMap.add(btnGardenOfTerror);
 		
 		JButton btnBlackheartsBay = new JButton("Blackheart's Bay");
+		btnBlackheartsBay.addMouseListener(new MouseAdapter() {
+			public void mouseEntered(MouseEvent e) {
+				addBackgroundMap(btnBlackheartsBay.getName());
+				label.setIcon(labelImage);
+			}
+		});
 		btnBlackheartsBay.setName("Blackheart's Bay");
 		btnBlackheartsBay.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				addBackgroundMenu(btnBlackheartsBay.getName());
+				lblNewLabel.setIcon(lblNewLabelImage);
 				panelMenuMap.setVisible(false);
 				panelMainMenu.setVisible(true);
 				btnChooseMap.setText("Blackheart's Bay");
@@ -279,9 +335,17 @@ public class AplikacjaMW050116MainClass {
 		panelMenuMap.add(btnBlackheartsBay);
 		
 		JButton btnDragonShire = new JButton("Dragon Shire");
+		btnDragonShire.addMouseListener(new MouseAdapter() {
+			public void mouseEntered(MouseEvent e) {
+				addBackgroundMap(btnDragonShire.getName());
+				label.setIcon(labelImage);
+			}
+		});
 		btnDragonShire.setName("Dragon Shire");
 		btnDragonShire.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				addBackgroundMenu(btnDragonShire.getName());
+				lblNewLabel.setIcon(lblNewLabelImage);
 				panelMenuMap.setVisible(false);
 				panelMainMenu.setVisible(true);
 				btnChooseMap.setText("Dragon Shire");
@@ -292,9 +356,17 @@ public class AplikacjaMW050116MainClass {
 		panelMenuMap.add(btnDragonShire);
 		
 		JButton btnCursedHollow = new JButton("Cursed Hollow");
+		btnCursedHollow.addMouseListener(new MouseAdapter() {
+			public void mouseEntered(MouseEvent e) {
+				addBackgroundMap(btnCursedHollow.getName());
+				label.setIcon(labelImage);
+			}
+		});
 		btnCursedHollow.setName("Cursed Hollow");
 		btnCursedHollow.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				addBackgroundMenu(btnCursedHollow.getName());
+				lblNewLabel.setIcon(lblNewLabelImage);
 				panelMenuMap.setVisible(false);
 				panelMainMenu.setVisible(true);
 				btnChooseMap.setText("Cursed Hollow");
@@ -305,9 +377,17 @@ public class AplikacjaMW050116MainClass {
 		panelMenuMap.add(btnCursedHollow);
 		
 		JButton btnBraxisHoldout = new JButton("Braxis Holdout");
+		btnBraxisHoldout.addMouseListener(new MouseAdapter() {
+			public void mouseEntered(MouseEvent e) {
+				addBackgroundMap(btnBraxisHoldout.getName());
+				label.setIcon(labelImage);
+			}
+		});
 		btnBraxisHoldout.setName("Braxis Holdout");
 		btnBraxisHoldout.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				addBackgroundMenu(btnBraxisHoldout.getName());
+				lblNewLabel.setIcon(lblNewLabelImage);
 				panelMenuMap.setVisible(false);
 				panelMainMenu.setVisible(true);
 				btnChooseMap.setText("Braxis Holdout");
@@ -318,9 +398,17 @@ public class AplikacjaMW050116MainClass {
 		panelMenuMap.add(btnBraxisHoldout);
 		
 		JButton btnWarheadJunction = new JButton("Warhead Junction");
+		btnWarheadJunction.addMouseListener(new MouseAdapter() {
+			public void mouseEntered(MouseEvent e) {
+				addBackgroundMap(btnWarheadJunction.getName());
+				label.setIcon(labelImage);
+			}
+		});
 		btnWarheadJunction.setName("Warhead Junction");
 		btnWarheadJunction.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				addBackgroundMenu(btnWarheadJunction.getName());
+				lblNewLabel.setIcon(lblNewLabelImage);
 				panelMenuMap.setVisible(false);
 				panelMainMenu.setVisible(true);
 				btnChooseMap.setText("Warhead Junction");
