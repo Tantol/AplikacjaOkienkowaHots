@@ -13,11 +13,15 @@ import java.awt.Color;
 import javax.swing.JLabel;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import javax.swing.JComboBox;
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
+import java.awt.event.ContainerAdapter;
+import java.awt.event.ContainerEvent;
 
 public class AplikacjaMW050116MainClass {
 
 	private JFrame frmNoTitleYet;
-	private JTextField textField;
 	private JPanel panelMainMenu;
 	private JPanel panelMenuMap;
 	private JPanel panelMenuInfo;
@@ -86,17 +90,10 @@ public class AplikacjaMW050116MainClass {
 				panelMainMenu.setVisible(false);
 			}
 		});
+		
 		btnChooseMap.setBounds(226, 11, 170, 39);
 		transparentButton(btnChooseMap);
 		panelMainMenu.add(btnChooseMap);
-		
-		textField = new JTextField();
-		textField.setForeground(new Color(0, 255, 255));
-		textField.setBounds(161, 61, 298, 241);
-		textField.setBorder(null);
-		textField.setOpaque(false);
-		panelMainMenu.add(textField);
-		textField.setColumns(10);
 		
 		JButton btnEnd = new JButton("Get OUT!");
 		btnEnd.addActionListener(new ActionListener() {
@@ -110,6 +107,52 @@ public class AplikacjaMW050116MainClass {
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabelImage=new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/tlo_640_480.jpg"));
+		
+		JComboBox comboBox_1 = new JComboBox();
+		comboBox_1.addContainerListener(new ContainerAdapter() {
+			@Override
+			public void componentAdded(ContainerEvent arg0) {
+			}
+		});
+		comboBox_1.setBounds(36, 83, 106, 20);
+		panelMainMenu.add(comboBox_1);
+		
+		JComboBox comboBox_2 = new JComboBox();
+		comboBox_2.setBounds(36, 114, 106, 20);
+		panelMainMenu.add(comboBox_2);
+		
+		JComboBox comboBox_3 = new JComboBox();
+		comboBox_3.setBounds(36, 145, 106, 20);
+		panelMainMenu.add(comboBox_3);
+		
+		JComboBox comboBox_4 = new JComboBox();
+		comboBox_4.setBounds(36, 176, 106, 20);
+		panelMainMenu.add(comboBox_4);
+		
+		JComboBox comboBox_5 = new JComboBox();
+		comboBox_5.setBounds(36, 207, 106, 20);
+		panelMainMenu.add(comboBox_5);
+		
+		JComboBox comboBox_6 = new JComboBox();
+		comboBox_6.setBounds(518, 83, 106, 20);
+		panelMainMenu.add(comboBox_6);
+		
+		JComboBox comboBox_7 = new JComboBox();
+		comboBox_7.setBounds(518, 114, 106, 20);
+		panelMainMenu.add(comboBox_7);
+		
+		JComboBox comboBox_8 = new JComboBox();
+		comboBox_8.setBounds(518, 145, 106, 20);
+		panelMainMenu.add(comboBox_8);
+		
+		JComboBox comboBox_9 = new JComboBox();
+		comboBox_9.setBounds(518, 176, 106, 20);
+		panelMainMenu.add(comboBox_9);
+		
+		JComboBox comboBox_10 = new JComboBox();
+		comboBox_10.setBounds(518, 207, 106, 20);
+		panelMainMenu.add(comboBox_10);
+		
 		lblNewLabel.setIcon(lblNewLabelImage);
 		lblNewLabel.setBounds(0, 0, 640, 480);
 		panelMainMenu.add(lblNewLabel);
