@@ -116,7 +116,8 @@ public class AplikacjaMW050116MainClass {
 		JComboBox comboBox_1 = new JComboBox(championNamesTeam);
 		comboBox_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				 String s = (String) comboBox_1.getSelectedItem();
+				
+				String s = (String) comboBox_1.getSelectedItem();
 				 
 				 DefaultComboBoxModel comboModel = new DefaultComboBoxModel();
 				 comboModel.removeAllElements();
@@ -127,7 +128,7 @@ public class AplikacjaMW050116MainClass {
 				 if (s == comboBox_1.getSelectedItem()){	 
 					 comboBox_1.removeItem(comboBox_1.getSelectedItem());
                      System.out.println(comboBox_1.getSelectedItem());
-                     comboBox_1.addItem(comboModel);	
+                     //comboBox_1.(comboModel);	
 				 	 }
                      
                      
