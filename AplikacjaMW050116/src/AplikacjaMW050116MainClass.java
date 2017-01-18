@@ -61,7 +61,7 @@ public class AplikacjaMW050116MainClass {
 	private void initialize() {
 		frmNoTitleYet = new JFrame();
 		frmNoTitleYet.setResizable(false);
-		frmNoTitleYet.setIconImage(Toolkit.getDefaultToolkit().getImage(AplikacjaMW050116MainClass.class.getResource("/resources/Coin_200_175.png")));
+		frmNoTitleYet.setIconImage(Toolkit.getDefaultToolkit().getImage(AplikacjaMW050116MainClass.class.getResource("/resources/Coin.png")));
 		frmNoTitleYet.setTitle("No title, yet... Alpha 0.1v");
 		frmNoTitleYet.setBounds(100, 100, 640, 480);
 		frmNoTitleYet.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -106,7 +106,7 @@ public class AplikacjaMW050116MainClass {
 		panelMainMenu.add(btnEnd);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabelImage=new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/tlo_640_480.jpg"));
+		lblNewLabelImage=new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/tlo.jpg"));
 		
 		String[] championNamesTeam = { "Johanna","Artanis","Li-Li","Brightwing","Zeratul","Thrall","Jaina","Chromie","Valla","Falstad" };
 		String[] championNamesEnemy = { "Johanna","Artanis","Li-Li","Brightwing","Zeratul","Thrall","Jaina","Chromie","Valla","Falstad" };
@@ -163,7 +163,7 @@ public class AplikacjaMW050116MainClass {
 		panelMainMenu.add(lblNewLabel);
 		
 		JLabel label = new JLabel("");
-		label.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/tlo_640_480.jpg")));
+		label.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/tlo.jpg")));
 		label.setBounds(0, 0, 640, 480);
 		
 		JButton btnHauntedMines = new JButton("Haunted Mines");
@@ -356,10 +356,10 @@ public class AplikacjaMW050116MainClass {
 		name.setOpaque(false);
 		}
 	private void addBackgroundMap(String name){
-		labelImage=new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+name+"_640_480.jpg"));
+		labelImage=new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+name+".jpg"));
 	}
 	
 	private void addBackgroundMenu(String name){
-		lblNewLabelImage=new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+name+"_640_480.jpg"));
+		lblNewLabelImage=new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+name+".jpg"));
 	}
 }
