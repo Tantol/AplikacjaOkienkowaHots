@@ -8,6 +8,8 @@ import javax.swing.JTextField;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Toolkit;
+
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
 import java.awt.Color;
 import javax.swing.JLabel;
@@ -108,15 +110,36 @@ public class AplikacjaMW050116MainClass {
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabelImage=new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/tlo.jpg"));
 		
-		String[] championNamesTeam = { "Johanna","Artanis","Li-Li","Brightwing","Zeratul","Thrall","Jaina","Chromie","Valla","Falstad" };
-		String[] championNamesEnemy = { "Johanna","Artanis","Li-Li","Brightwing","Zeratul","Thrall","Jaina","Chromie","Valla","Falstad" };
+		String[] championNamesTeam = { "Chose Character","Johanna","Artanis","Li-Li","Brightwing","Zeratul","Thrall","Jaina","Chromie","Valla","Falstad" };
+		String[] championNamesEnemy = { "Chose Character","Johanna","Artanis","Li-Li","Brightwing","Zeratul","Thrall","Jaina","Chromie","Valla","Falstad" };
 		
 		JComboBox comboBox_1 = new JComboBox(championNamesTeam);
 		comboBox_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				 String s = (String) comboBox_1.getSelectedItem();
+				 
+				 DefaultComboBoxModel comboModel = new DefaultComboBoxModel();
+				 comboModel.removeAllElements();
+                 
+                 for(int i = 0; i<championNamesTeam.length; i++) {
+                   comboModel.addElement(championNamesTeam[i]);  
+                 }
+				 if (s == comboBox_1.getSelectedItem()){	 
+					 comboBox_1.removeItem(comboBox_1.getSelectedItem());
+                     System.out.println(comboBox_1.getSelectedItem());
+                     comboBox_1.addItem(comboModel);	
+				 	 }
+                     
+                     
+				/*
 				for(String name : championNamesTeam){
-					if(name==comboBox_1.getSelectedItem()){comboBox_1.removeAll();}
-				}
+					if(name==comboBox_1.getSelectedItem()){
+						comboBox_1.removeAll();
+						}
+	
+				}*/
+				
+				
 			}
 		});
 		comboBox_1.setBounds(36, 83, 106, 20);
