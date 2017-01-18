@@ -108,45 +108,53 @@ public class AplikacjaMW050116MainClass {
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabelImage=new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/tlo_640_480.jpg"));
 		
-		String[] championNames = { "Abathur","Abathur2","Abathur","Abathur","Abathur","Abathur","Abathur","Abathur","Abathur","Abathur" };
+		String[] championNamesTeam = { "Johanna","Artanis","Li-Li","Brightwing","Zeratul","Thrall","Jaina","Chromie","Valla","Falstad" };
+		String[] championNamesEnemy = { "Johanna","Artanis","Li-Li","Brightwing","Zeratul","Thrall","Jaina","Chromie","Valla","Falstad" };
 		
-		JComboBox comboBox_1 = new JComboBox(championNames);
+		JComboBox comboBox_1 = new JComboBox(championNamesTeam);
+		comboBox_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				for(String name : championNamesTeam){
+					if(name==comboBox_1.getSelectedItem()){comboBox_1.removeAll();}
+				}
+			}
+		});
 		comboBox_1.setBounds(36, 83, 106, 20);
 		panelMainMenu.add(comboBox_1);
 		
-		JComboBox comboBox_2 = new JComboBox();
+		JComboBox comboBox_2 = new JComboBox(championNamesTeam);
 		comboBox_2.setBounds(36, 114, 106, 20);
 		panelMainMenu.add(comboBox_2);
 		
-		JComboBox comboBox_3 = new JComboBox();
+		JComboBox comboBox_3 = new JComboBox(championNamesTeam);
 		comboBox_3.setBounds(36, 145, 106, 20);
 		panelMainMenu.add(comboBox_3);
 		
-		JComboBox comboBox_4 = new JComboBox();
+		JComboBox comboBox_4 = new JComboBox(championNamesTeam);
 		comboBox_4.setBounds(36, 176, 106, 20);
 		panelMainMenu.add(comboBox_4);
 		
-		JComboBox comboBox_5 = new JComboBox();
+		JComboBox comboBox_5 = new JComboBox(championNamesTeam);
 		comboBox_5.setBounds(36, 207, 106, 20);
 		panelMainMenu.add(comboBox_5);
 		
-		JComboBox comboBox_6 = new JComboBox();
+		JComboBox comboBox_6 = new JComboBox(championNamesEnemy);
 		comboBox_6.setBounds(518, 83, 106, 20);
 		panelMainMenu.add(comboBox_6);
 		
-		JComboBox comboBox_7 = new JComboBox();
+		JComboBox comboBox_7 = new JComboBox(championNamesEnemy);
 		comboBox_7.setBounds(518, 114, 106, 20);
 		panelMainMenu.add(comboBox_7);
 		
-		JComboBox comboBox_8 = new JComboBox();
+		JComboBox comboBox_8 = new JComboBox(championNamesEnemy);
 		comboBox_8.setBounds(518, 145, 106, 20);
 		panelMainMenu.add(comboBox_8);
 		
-		JComboBox comboBox_9 = new JComboBox();
+		JComboBox comboBox_9 = new JComboBox(championNamesEnemy);
 		comboBox_9.setBounds(518, 176, 106, 20);
 		panelMainMenu.add(comboBox_9);
 		
-		JComboBox comboBox_10 = new JComboBox();
+		JComboBox comboBox_10 = new JComboBox(championNamesEnemy);
 		comboBox_10.setBounds(518, 207, 106, 20);
 		panelMainMenu.add(comboBox_10);
 		
