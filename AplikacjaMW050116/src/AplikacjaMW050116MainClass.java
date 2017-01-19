@@ -417,7 +417,54 @@ public class AplikacjaMW050116MainClass {
 		});
 		
 		////
-		
+		JLabel labelButton1 = new JLabel("");
+		labelButton1.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_On.png")));
+		labelButton1.setBounds(480, 80, 160, 40);
+		JLabel labelButton2 = new JLabel("");
+		labelButton2.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_On.png")));
+		labelButton2.setBounds(320, 80, 160, 40);
+		JLabel labelButton3 = new JLabel("");
+		labelButton3.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_On.png")));
+		labelButton3.setBounds(160, 80, 160, 40);
+		JLabel labelButton4 = new JLabel("");
+		labelButton4.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_On.png")));
+		labelButton4.setBounds(0, 80, 160, 40);
+		JLabel labelButton5 = new JLabel("");
+		labelButton5.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_On.png")));
+		labelButton5.setBounds(480, 40, 160, 40);
+		JLabel labelButton6 = new JLabel("");
+		labelButton6.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_On.png")));
+		labelButton6.setBounds(320, 40, 160, 40);
+		JLabel labelButton7 = new JLabel("");
+		labelButton7.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_On.png")));
+		labelButton7.setBounds(160, 40, 160, 40);
+		JLabel labelButton8 = new JLabel("");
+		labelButton8.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_On.png")));
+		labelButton8.setBounds(0, 40, 160, 40);
+		JLabel labelButton9 = new JLabel("");
+		labelButton9.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_On.png")));
+		labelButton9.setBounds(480, 0, 160, 40);
+		JLabel labelButton10 = new JLabel("");
+		labelButton10.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_On.png")));
+		labelButton10.setBounds(320, 0, 160, 40);
+		JLabel labelButton11 = new JLabel("");
+		labelButton11.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_On.png")));
+		labelButton11.setBounds(160, 0, 160, 40);
+		JLabel labelButton12 = new JLabel("");
+		labelButton12.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_On.png")));
+		labelButton12.setBounds(0, 0, 160, 40);
+		panelMenuMap.add(labelButton1);
+		panelMenuMap.add(labelButton2);
+		panelMenuMap.add(labelButton3);
+		panelMenuMap.add(labelButton4);
+		panelMenuMap.add(labelButton5);
+		panelMenuMap.add(labelButton6);
+		panelMenuMap.add(labelButton7);
+		panelMenuMap.add(labelButton8);
+		panelMenuMap.add(labelButton9);
+		panelMenuMap.add(labelButton10);
+		panelMenuMap.add(labelButton11);
+		panelMenuMap.add(labelButton12);
 		lblNewLabel.setIcon(lblNewLabelImage);
 		lblNewLabel.setBounds(0, 0, 640, 480);
 		panelMainMenu.add(lblNewLabel);
@@ -432,8 +479,14 @@ public class AplikacjaMW050116MainClass {
 		btnHauntedMines.addMouseListener(new MouseAdapter() {
 			public void mouseEntered(MouseEvent arg0) {
 				addBackgroundMap(btnHauntedMines.getName());
+				labelButton3.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_Off.png")));
 				label.setIcon(labelImage);
 			}
+			public void mouseExited(MouseEvent arg0) {
+				addBackgroundMap(btnHauntedMines.getName());
+				labelButton3.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_On.png")));
+				label.setIcon(labelImage);
+				}
 		});
 		btnHauntedMines.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -446,23 +499,24 @@ public class AplikacjaMW050116MainClass {
 		});
 		panelMenuMap.setLayout(null);
 		
-		JLabel labelButton1 = new JLabel("New label");
-		labelButton1.addMouseListener(new MouseAdapter() {
-			
-		});
-		labelButton1.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_On.png")));
-		labelButton1.setBounds(480, 117, 160, 40);
-		panelMenuMap.add(labelButton1);
+		
 		transparentButton(btnHauntedMines);
 		panelMenuMap.add(btnHauntedMines);
+		
 		
 		JButton btnTowersOfDoom = new JButton("Towers of Doom");
 		btnTowersOfDoom.setBounds(320, 40, 160, 40);
 		btnTowersOfDoom.addMouseListener(new MouseAdapter() {
 			public void mouseEntered(MouseEvent arg0) {
 				addBackgroundMap(btnTowersOfDoom.getName());
+				labelButton6.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_Off.png")));
 				label.setIcon(labelImage);
 			}
+			public void mouseExited(MouseEvent arg0) {
+				addBackgroundMap(btnTowersOfDoom.getName());
+				labelButton6.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_On.png")));
+				label.setIcon(labelImage);
+				}
 		});
 		btnTowersOfDoom.setName("Towers of Doom");
 		btnTowersOfDoom.addActionListener(new ActionListener() {
@@ -482,8 +536,14 @@ public class AplikacjaMW050116MainClass {
 		btnInfernalShrines.addMouseListener(new MouseAdapter() {
 			public void mouseEntered(MouseEvent e) {
 				addBackgroundMap(btnInfernalShrines.getName());
+				labelButton5.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_Off.png")));
 				label.setIcon(labelImage);
 			}
+			public void mouseExited(MouseEvent arg0) {
+				addBackgroundMap(btnInfernalShrines.getName());
+				labelButton5.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_On.png")));
+				label.setIcon(labelImage);
+				}
 		});
 		btnInfernalShrines.setName("Infernal Shrines");
 		btnInfernalShrines.addActionListener(new ActionListener() {
@@ -503,8 +563,14 @@ public class AplikacjaMW050116MainClass {
 		btnBattlefieldOfEternity.addMouseListener(new MouseAdapter() {
 			public void mouseEntered(MouseEvent e) {
 				addBackgroundMap(btnBattlefieldOfEternity.getName());
+				labelButton11.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_Off.png")));
 				label.setIcon(labelImage);
 			}
+			public void mouseExited(MouseEvent arg0) {
+				addBackgroundMap(btnBattlefieldOfEternity.getName());
+				labelButton11.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_On.png")));
+				label.setIcon(labelImage);
+				}
 		});
 		btnBattlefieldOfEternity.setName("Battlefield of Eternity");
 		btnBattlefieldOfEternity.addActionListener(new ActionListener() {
@@ -524,11 +590,15 @@ public class AplikacjaMW050116MainClass {
 		btnTombOfThe.addMouseListener(new MouseAdapter() {
 			public void mouseEntered(MouseEvent e) {
 				addBackgroundMap(btnTombOfThe.getName());
+				labelButton12.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_Off.png")));
 				label.setIcon(labelImage);
 			}
 
-			public void mouseExited(MouseEvent e) {
-			}
+			public void mouseExited(MouseEvent arg0) {
+				addBackgroundMap(btnTombOfThe.getName());
+				labelButton12.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_On.png")));
+				label.setIcon(labelImage);
+				}
 		});
 		btnTombOfThe.setName("Tomb of The Spider Quoeen");
 		btnTombOfThe.addActionListener(new ActionListener() {
@@ -550,8 +620,15 @@ public class AplikacjaMW050116MainClass {
 		btnSkyTemple.addMouseListener(new MouseAdapter() {
 			public void mouseEntered(MouseEvent e) {
 				addBackgroundMap(btnSkyTemple.getName());
+				labelButton2.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_Off.png")));
 				label.setIcon(labelImage);
 			}
+			public void mouseExited(MouseEvent arg0) {
+				addBackgroundMap(btnSkyTemple.getName());
+				labelButton2.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_On.png")));
+				label.setIcon(labelImage);
+				}
+
 		});
 		btnSkyTemple.setName("Sky Temple");
 		btnSkyTemple.addActionListener(new ActionListener() {
@@ -573,12 +650,12 @@ public class AplikacjaMW050116MainClass {
 				addBackgroundMap(btnGardenOfTerror.getName());
 				labelButton1.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_Off.png")));
 				label.setIcon(labelImage);
-			}
-			public void mouseExited(MouseEvent e) {
+				}
+			public void mouseExited(MouseEvent arg0) {
 				addBackgroundMap(btnGardenOfTerror.getName());
 				labelButton1.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_On.png")));
 				label.setIcon(labelImage);
-			}
+				}
 		});
 		btnGardenOfTerror.setName("Garden of Terror");
 		btnGardenOfTerror.addActionListener(new ActionListener() {
@@ -598,8 +675,14 @@ public class AplikacjaMW050116MainClass {
 		btnBlackheartsBay.addMouseListener(new MouseAdapter() {
 			public void mouseEntered(MouseEvent e) {
 				addBackgroundMap(btnBlackheartsBay.getName());
+				labelButton10.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_Off.png")));
 				label.setIcon(labelImage);
 			}
+			public void mouseExited(MouseEvent arg0) {
+				addBackgroundMap(btnBlackheartsBay.getName());
+				labelButton10.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_On.png")));
+				label.setIcon(labelImage);
+				}
 		});
 		btnBlackheartsBay.setName("Blackheart's Bay");
 		btnBlackheartsBay.addActionListener(new ActionListener() {
@@ -619,8 +702,14 @@ public class AplikacjaMW050116MainClass {
 		btnDragonShire.addMouseListener(new MouseAdapter() {
 			public void mouseEntered(MouseEvent e) {
 				addBackgroundMap(btnDragonShire.getName());
+				labelButton8.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_Off.png")));
 				label.setIcon(labelImage);
 			}
+			public void mouseExited(MouseEvent arg0) {
+				addBackgroundMap(btnDragonShire.getName());
+				labelButton8.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_On.png")));
+				label.setIcon(labelImage);
+				}
 		});
 		btnDragonShire.setName("Dragon Shire");
 		btnDragonShire.addActionListener(new ActionListener() {
@@ -640,8 +729,14 @@ public class AplikacjaMW050116MainClass {
 		btnCursedHollow.addMouseListener(new MouseAdapter() {
 			public void mouseEntered(MouseEvent e) {
 				addBackgroundMap(btnCursedHollow.getName());
+				labelButton4.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_Off.png")));
 				label.setIcon(labelImage);
 			}
+			public void mouseExited(MouseEvent arg0) {
+				addBackgroundMap(btnCursedHollow.getName());
+				labelButton4.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_On.png")));
+				label.setIcon(labelImage);
+				}
 		});
 		btnCursedHollow.setName("Cursed Hollow");
 		btnCursedHollow.addActionListener(new ActionListener() {
@@ -661,8 +756,14 @@ public class AplikacjaMW050116MainClass {
 		btnBraxisHoldout.addMouseListener(new MouseAdapter() {
 			public void mouseEntered(MouseEvent e) {
 				addBackgroundMap(btnBraxisHoldout.getName());
+				labelButton7.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_Off.png")));
 				label.setIcon(labelImage);
 			}
+			public void mouseExited(MouseEvent arg0) {
+				addBackgroundMap(btnBraxisHoldout.getName());
+				labelButton7.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_On.png")));
+				label.setIcon(labelImage);
+				}
 		});
 		btnBraxisHoldout.setName("Braxis Holdout");
 		btnBraxisHoldout.addActionListener(new ActionListener() {
@@ -682,8 +783,14 @@ public class AplikacjaMW050116MainClass {
 		btnWarheadJunction.addMouseListener(new MouseAdapter() {
 			public void mouseEntered(MouseEvent e) {
 				addBackgroundMap(btnWarheadJunction.getName());
+				labelButton9.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_Off.png")));
 				label.setIcon(labelImage);
 			}
+			public void mouseExited(MouseEvent arg0) {
+				addBackgroundMap(btnWarheadJunction.getName());
+				labelButton9.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_On.png")));
+				label.setIcon(labelImage);
+				}
 		});
 		btnWarheadJunction.setName("Warhead Junction");
 		btnWarheadJunction.addActionListener(new ActionListener() {
@@ -724,6 +831,8 @@ public class AplikacjaMW050116MainClass {
 		name.setBorderPainted(false);
 		name.setContentAreaFilled(false);
 		name.setOpaque(false);
+		}
+	private void transparentLabel(JLabel name) {
 		}
 	private void addBackgroundMap(String name){
 		labelImage=new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+name+".jpg"));
