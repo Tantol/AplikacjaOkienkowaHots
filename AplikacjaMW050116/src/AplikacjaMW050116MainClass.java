@@ -93,7 +93,25 @@ public class AplikacjaMW050116MainClass {
 		panelMenuInfo.add(btnNewButton);
 		panelMenuInfo.setVisible(false);
 		
+		JLabel labelButtonChooseMap = new JLabel("");
+		labelButtonChooseMap.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_On.png")));
+		labelButtonChooseMap.setBounds(233, 10, 160, 40);
+		panelMainMenu.add(labelButtonChooseMap);
+		JLabel labelButtonGetOut = new JLabel("");
+		labelButtonGetOut.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_On.png")));
+		labelButtonGetOut.setBounds(10, 400, 160, 40);
+		panelMainMenu.add(labelButtonGetOut);
+		
 		JButton btnChooseMap = new JButton("Choose Map");
+		btnChooseMap.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				labelButtonChooseMap.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_Off.png")));
+				}
+			public void mouseExited(MouseEvent arg0) {
+				labelButtonChooseMap.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_On.png")));
+				}
+		});
 		btnChooseMap.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				panelMenuMap.setVisible(true);
@@ -102,17 +120,25 @@ public class AplikacjaMW050116MainClass {
 		});
 		
 		
-		btnChooseMap.setBounds(226, 11, 170, 39);
+		btnChooseMap.setBounds(233, 10, 160, 40);
 		transparentButton(btnChooseMap);
 		panelMainMenu.add(btnChooseMap);
 		
 		JButton btnEnd = new JButton("Get OUT!");
+		btnEnd.addMouseListener(new MouseAdapter() {
+			public void mouseEntered(MouseEvent e) {
+				labelButtonGetOut.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_Off.png")));
+				}
+			public void mouseExited(MouseEvent arg0) {
+				labelButtonGetOut.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_On.png")));
+				}
+		});
 		btnEnd.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				System.exit(0);
 			}
 		});
-		btnEnd.setBounds(251, 342, 106, 55);
+		btnEnd.setBounds(10, 400, 160, 40);
 		transparentButton(btnEnd);
 		panelMainMenu.add(btnEnd);
 		
