@@ -208,7 +208,7 @@ public class AplikacjaMW050116MainClass {
 				btnChampion_3.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+(String)btnChampion_3.getName()+"_Off.png")));
 				btnChampion_4.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+(String)btnChampion_4.getName()+"_Off.png")));
 				btnChampion_5.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+(String)btnChampion_5.getName()+"_Off.png")));
-				textPane_13.setText("test"); flaga_1=1; return;}
+				textPane_13.setText("test"); flaga_1=1;flaga_3=0;flaga_2=0;flaga_4=0;flaga_5=0; return;}
 				if(flaga_1==1){btnChampion_1.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+(String)btnChampion_1.getName()+"_Off.png")));
 				textPane_13.setText(""); flaga_1=0;labeltextPane_13.setVisible(false);
 				for(int i = 0; i<talent1.length;i++){
