@@ -101,14 +101,71 @@ public class AplikacjaMW050116MainClass {
 		frmNoTitleYet.getContentPane().add(panelMenuInfo, "name_470414835695040");
 		panelMenuInfo.setLayout(null);
 		
+		//Label For 1st Select Skills
+		int bflag = 77;
+		JLabel[] talent1 = new JLabel[7];
+		for(int i = 0; i<talent1.length;i++){
+			talent1[i] = new JLabel();
+			talent1[i].setBounds(bflag,366,55,55);
+			bflag+=72;
+			talent1[i].setVisible(false);
+			panelMenuInfo.add(talent1[i]);
+			talent1[i].setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/tb1.jpg")));
+		}
+		bflag = 77;
+		JLabel[] talent2 = new JLabel[7];
+		for(int i = 0; i<talent2.length;i++){
+			talent2[i] = new JLabel();
+			talent2[i].setBounds(bflag,366,55,55);
+			bflag+=72;
+			talent2[i].setVisible(false);
+			panelMenuInfo.add(talent2[i]);
+			talent2[i].setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/tb2.jpg")));
+		}
+		bflag = 77;
+		JLabel[] talent3 = new JLabel[7];
+		for(int i = 0; i<talent3.length;i++){
+			talent3[i] = new JLabel();
+			talent3[i].setBounds(bflag,366,55,55);
+			bflag+=72;
+			talent3[i].setVisible(false);
+			panelMenuInfo.add(talent3[i]);
+			talent3[i].setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/tb3.jpg")));
+		}
+		bflag = 77;
+		JLabel[] talent4 = new JLabel[7];
+		for(int i = 0; i<talent4.length;i++){
+			talent4[i] = new JLabel();
+			talent4[i].setBounds(bflag,366,55,55);
+			bflag+=72;
+			talent4[i].setVisible(false);
+			panelMenuInfo.add(talent4[i]);
+			talent4[i].setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/tb4.jpg")));
+		}
+		bflag = 77;
+		JLabel[] talent5 = new JLabel[7];
+		for(int i = 0; i<talent5.length;i++){
+			talent5[i] = new JLabel();
+			talent5[i].setBounds(bflag,366,55,55);
+			bflag+=72;
+			talent5[i].setVisible(false);
+			panelMenuInfo.add(talent5[i]);
+			talent5[i].setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/tb5.jpg")));
+		}
+		bflag = 77;
+
+		
+		
 		JLabel labeltextPane_13 = new JLabel("");
-		labeltextPane_13.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/skillMenu_v2.png")));
 		labeltextPane_13.setBounds(49, 321, 540, 120);
+		labeltextPane_13.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/skillMenu_v2.png")));
 		panelMenuInfo.add(labeltextPane_13);
+		labeltextPane_13.setVisible(false);
+		
 		
 		JTextField textPane_13 = new JTextField();
-		textPane_13.setHorizontalAlignment(SwingConstants.CENTER);
 		textPane_13.setBounds(49, 321, 540, 120);
+		textPane_13.setHorizontalAlignment(SwingConstants.CENTER);
 		textPane_13.setEditable(false);
 		textPane_13.setForeground(new Color(0, 255, 255));
 		textPane_13.setBorder(null);
@@ -138,14 +195,25 @@ public class AplikacjaMW050116MainClass {
 		btnChampion_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(flaga_1==0){
+			    labeltextPane_13.setVisible(true);
 				btnChampion_1.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+(String)btnChampion_1.getName()+"_On.png")));
 				btnChampion_2.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+(String)btnChampion_2.getName()+"_Off.png")));
 				btnChampion_3.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+(String)btnChampion_3.getName()+"_Off.png")));
 				btnChampion_4.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+(String)btnChampion_4.getName()+"_Off.png")));
 				btnChampion_5.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+(String)btnChampion_5.getName()+"_Off.png")));
+				for(int i = 0; i<talent1.length;i++){
+					talent1[i].setVisible(true);
+					talent4[i].setVisible(false);
+					talent5[i].setVisible(false);
+					talent2[i].setVisible(false);
+					talent3[i].setVisible(false);
+				}
 				textPane_13.setText("test"); flaga_1=1; return;}
 				if(flaga_1==1){btnChampion_1.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+(String)btnChampion_1.getName()+"_Off.png")));
-				textPane_13.setText(""); flaga_1=0;return;}
+				textPane_13.setText(""); flaga_1=0;labeltextPane_13.setVisible(false);
+				for(int i = 0; i<talent1.length;i++){
+					talent1[i].setVisible(false);
+				}return;}
 			}
 		});
 		btnChampion_1.addMouseListener(new MouseAdapter() {
@@ -161,6 +229,14 @@ public class AplikacjaMW050116MainClass {
 		btnChampion_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(flaga_2==0){
+				labeltextPane_13.setVisible(true);
+				for(int i = 0; i<talent2.length;i++){
+					talent2[i].setVisible(true);
+					talent4[i].setVisible(false);
+					talent1[i].setVisible(false);
+					talent5[i].setVisible(false);
+					talent3[i].setVisible(false);
+				}
 				btnChampion_2.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+(String)btnChampion_2.getName()+"_On.png")));
 				btnChampion_1.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+(String)btnChampion_1.getName()+"_Off.png")));
 				btnChampion_3.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+(String)btnChampion_3.getName()+"_Off.png")));
@@ -168,7 +244,10 @@ public class AplikacjaMW050116MainClass {
 				btnChampion_5.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+(String)btnChampion_5.getName()+"_Off.png")));
 				textPane_13.setText("test"); flaga_2=1;flaga_1=0;flaga_3=0;flaga_4=0;flaga_5=0; return;}
 				if(flaga_2==1){btnChampion_2.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+(String)btnChampion_2.getName()+"_Off.png")));
-				textPane_13.setText(""); flaga_2=0;return;}
+				textPane_13.setText(""); flaga_2=0;labeltextPane_13.setVisible(false);
+				for(int i = 0; i<talent2.length;i++){
+					talent2[i].setVisible(false);
+				}return;}
 			}
 		});
 		btnChampion_2.addMouseListener(new MouseAdapter() {
@@ -184,6 +263,14 @@ public class AplikacjaMW050116MainClass {
 		btnChampion_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(flaga_3==0){
+					labeltextPane_13.setVisible(true);
+					for(int i = 0; i<talent3.length;i++){
+						talent3[i].setVisible(true);
+						talent4[i].setVisible(false);
+						talent1[i].setVisible(false);
+						talent2[i].setVisible(false);
+						talent5[i].setVisible(false);
+					}
 				btnChampion_3.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+(String)btnChampion_3.getName()+"_On.png")));
 				btnChampion_1.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+(String)btnChampion_1.getName()+"_Off.png")));
 				btnChampion_2.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+(String)btnChampion_2.getName()+"_Off.png")));
@@ -191,7 +278,10 @@ public class AplikacjaMW050116MainClass {
 				btnChampion_5.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+(String)btnChampion_5.getName()+"_Off.png")));
 				textPane_13.setText("test"); flaga_3=1;flaga_1=0;flaga_2=0;flaga_4=0;flaga_5=0; return;}
 				if(flaga_3==1){btnChampion_3.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+(String)btnChampion_3.getName()+"_Off.png")));
-				textPane_13.setText(""); flaga_3=0;return;}
+				textPane_13.setText(""); flaga_3=0;labeltextPane_13.setVisible(false);
+				for(int i = 0; i<talent3.length;i++){
+					talent3[i].setVisible(false);
+				}return;}
 			}
 		});
 		btnChampion_3.addMouseListener(new MouseAdapter() {
@@ -207,6 +297,14 @@ public class AplikacjaMW050116MainClass {
 		btnChampion_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(flaga_4==0){
+					labeltextPane_13.setVisible(true);
+					for(int i = 0; i<talent4.length;i++){
+						talent4[i].setVisible(true);
+						talent5[i].setVisible(false);
+						talent1[i].setVisible(false);
+						talent2[i].setVisible(false);
+						talent3[i].setVisible(false);
+					}
 				btnChampion_4.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+(String)btnChampion_4.getName()+"_On.png")));
 				btnChampion_1.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+(String)btnChampion_1.getName()+"_Off.png")));
 				btnChampion_2.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+(String)btnChampion_2.getName()+"_Off.png")));
@@ -214,7 +312,10 @@ public class AplikacjaMW050116MainClass {
 				btnChampion_5.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+(String)btnChampion_5.getName()+"_Off.png")));
 				textPane_13.setText("test"); flaga_4=1;flaga_1=0;flaga_3=0;flaga_2=0;flaga_5=0; return;}
 				if(flaga_4==1){btnChampion_4.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+(String)btnChampion_4.getName()+"_Off.png")));
-				textPane_13.setText(""); flaga_4=0;return;}
+				textPane_13.setText(""); flaga_4=0;labeltextPane_13.setVisible(false);
+				for(int i = 0; i<talent4.length;i++){
+					talent4[i].setVisible(false);
+				}return;}
 			}
 		});
 		btnChampion_4.addMouseListener(new MouseAdapter() {
@@ -230,6 +331,14 @@ public class AplikacjaMW050116MainClass {
 		btnChampion_5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(flaga_5==0){
+					labeltextPane_13.setVisible(true);
+					for(int i = 0; i<talent5.length;i++){
+						talent5[i].setVisible(true);
+						talent4[i].setVisible(false);
+						talent1[i].setVisible(false);
+						talent2[i].setVisible(false);
+						talent3[i].setVisible(false);
+					}
 				btnChampion_5.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+(String)btnChampion_5.getName()+"_On.png")));
 				btnChampion_1.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+(String)btnChampion_1.getName()+"_Off.png")));
 				btnChampion_2.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+(String)btnChampion_2.getName()+"_Off.png")));
@@ -237,7 +346,10 @@ public class AplikacjaMW050116MainClass {
 				btnChampion_4.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+(String)btnChampion_4.getName()+"_Off.png")));
 				textPane_13.setText("test"); flaga_5=1;flaga_1=0;flaga_3=0;flaga_4=0;flaga_2=0; return;}
 				if(flaga_5==1){btnChampion_5.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+(String)btnChampion_5.getName()+"_Off.png")));
-				textPane_13.setText(""); flaga_5=0;return;}
+				textPane_13.setText(""); flaga_5=0;labeltextPane_13.setVisible(false);
+				for(int i = 0; i<talent5.length;i++){
+					talent5[i].setVisible(false);
+				}return;}
 			}
 		});
 		btnChampion_5.addMouseListener(new MouseAdapter() {
@@ -252,9 +364,9 @@ public class AplikacjaMW050116MainClass {
 		});
 		////
 		JTextPane textPane = new JTextPane();
+		textPane.setBounds(232, 13, 320, 20);
 		textPane.setFont(new Font("Tahoma", Font.BOLD, 15));
 		textPane.setEditable(false);
-		textPane.setBounds(232, 13, 320, 20);
 		textPane.setForeground(new Color(0, 255, 255));
 		textPane.setBorder(null);
 		textPane.setOpaque(false);
@@ -262,9 +374,9 @@ public class AplikacjaMW050116MainClass {
 		panelMenuInfo.add(textPane);
 		
 		JTextField textPane_14 = new JTextField();
+		textPane_14.setBounds(49, 255, 100, 20);
 		textPane_14.setHorizontalAlignment(SwingConstants.CENTER);
 		textPane_14.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 12));
-		textPane_14.setBounds(49, 255, 100, 20);
 		textPane_14.setEditable(false);
 		textPane_14.setForeground(Color.BLACK);
 		textPane_14.setBorder(null);
@@ -272,9 +384,9 @@ public class AplikacjaMW050116MainClass {
 		panelMenuInfo.add(textPane_14);
 		
 		JTextField textPane_15 = new JTextField();
+		textPane_15.setBounds(159, 255, 100, 20);
 		textPane_15.setHorizontalAlignment(SwingConstants.CENTER);
 		textPane_15.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 12));
-		textPane_15.setBounds(159, 255, 100, 20);
 		textPane_15.setEditable(false);
 		textPane_15.setForeground(Color.BLACK);
 		textPane_15.setBorder(null);
@@ -282,30 +394,30 @@ public class AplikacjaMW050116MainClass {
 		panelMenuInfo.add(textPane_15);
 		
 		JTextField textPane_16 = new JTextField();
+		textPane_16.setBounds(269, 255, 100, 20);
 		textPane_16.setHorizontalAlignment(SwingConstants.CENTER);
 		textPane_16.setForeground(Color.BLACK);
 		textPane_16.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 12));
-		textPane_16.setBounds(269, 255, 100, 20);
 		textPane_16.setEditable(false);
 		textPane_16.setBorder(null);
 		textPane_16.setOpaque(false);
 		panelMenuInfo.add(textPane_16);
 		
 		JTextField textPane_17 = new JTextField();
+		textPane_17.setBounds(379, 255, 100, 20);
 		textPane_17.setHorizontalAlignment(SwingConstants.CENTER);
 		textPane_17.setForeground(Color.BLACK);
 		textPane_17.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 12));
-		textPane_17.setBounds(379, 255, 100, 20);
 		textPane_17.setEditable(false);
 		textPane_17.setBorder(null);
 		textPane_17.setOpaque(false);
 		panelMenuInfo.add(textPane_17);
 		
 		JTextField textPane_18 = new JTextField();
+		textPane_18.setBounds(489, 255, 100, 20);
 		textPane_18.setHorizontalAlignment(SwingConstants.CENTER);
 		textPane_18.setForeground(Color.BLACK);
 		textPane_18.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 12));
-		textPane_18.setBounds(489, 255, 100, 20);
 		textPane_18.setEditable(false);
 		textPane_18.setBorder(null);
 		textPane_18.setOpaque(false);
@@ -320,12 +432,13 @@ public class AplikacjaMW050116MainClass {
 		JButton btnNewButton = new JButton("Get New Composition");
 		btnNewButton.setBounds(427, 280, 160, 40);
 		panelMenuInfo.add(btnNewButton);
+		transparentButton(btnNewButton);
 		btnNewButton.addMouseListener(new MouseAdapter() {
 			public void mouseEntered(MouseEvent e) {
-				btnNewButton.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_Off.png")));
+				lblbtnNewButton.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_Off.png")));
 				}
 			public void mouseExited(MouseEvent arg0) {
-				btnNewButton.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_On.png")));
+				lblbtnNewButton.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_On.png")));
 				}
 		});
 		btnNewButton.addActionListener(new ActionListener() {
@@ -335,6 +448,7 @@ public class AplikacjaMW050116MainClass {
 						try {
 							AplikacjaMW050116MainClass window = new AplikacjaMW050116MainClass();
 							window.frmNoTitleYet.setVisible(true);
+							lblbtnNewButton.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_On.png")));
 						} catch (Exception e) {
 							e.printStackTrace();
 						}
