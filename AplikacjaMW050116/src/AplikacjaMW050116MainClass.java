@@ -481,7 +481,7 @@ public class AplikacjaMW050116MainClass {
 		labelButton12.setBounds(0, 0, 160, 40);
 		JLabel labelButton13 = new JLabel("");
 		labelButton13.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_On.png")));
-		labelButton13.setBounds(250, 300, 160, 40);
+		labelButton13.setBounds(10, 400, 160, 40);
 		panelMenuMap.add(labelButton1);
 		panelMenuMap.add(labelButton2);
 		panelMenuMap.add(labelButton3);
@@ -837,7 +837,7 @@ public class AplikacjaMW050116MainClass {
 		
 		JButton btnExit = new JButton("Exit");
 
-		btnExit.setBounds(250, 300, 160, 40);
+		btnExit.setBounds(10, 400, 160, 40);
 		btnExit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				panelMenuMap.setVisible(false);
