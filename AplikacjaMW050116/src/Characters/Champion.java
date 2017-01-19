@@ -1,8 +1,9 @@
 package Characters;
 
+
 public class Champion {
 	public Abilitie skillQ, skillW, skillE;
-	public Abilitie passiveD;
+	public Abilitie skillD;
 	public Abilitie heroSkill1;
 	public Abilitie heroSkill2;
 	public String name;
@@ -16,7 +17,13 @@ public class Champion {
 	public boolean aAIsRange;
 	
 	
-	public Champion(String name){
+	public Champion(){
+		this.skillQ = null;
+		this.skillW = null;
+		this.skillE = null;
+		this.skillD = null;
+		this.heroSkill1 = null;
+		this.heroSkill2 = null;
 		this.name=name;
 		this.role="";
 		this.universe="";
@@ -31,7 +38,7 @@ public class Champion {
 	public void skillQ(String name){this.skillQ(name);}
 	public void skillW(String name){this.skillW(name);}
 	public void skillE(String name){this.skillE(name);}
-	public void passiveD(String name){this.passiveD(name);}
+	public void skillD(String name){this.skillD(name);}
 	public void heroSkill1(String name){this.heroSkill1(name);}	
 	public void heroSkill2(String name){heroSkill2(name);}
 	
