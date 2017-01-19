@@ -453,6 +453,9 @@ public class AplikacjaMW050116MainClass {
 		JLabel labelButton12 = new JLabel("");
 		labelButton12.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_On.png")));
 		labelButton12.setBounds(0, 0, 160, 40);
+		JLabel labelButton13 = new JLabel("");
+		labelButton13.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_On.png")));
+		labelButton13.setBounds(250, 300, 160, 40);
 		panelMenuMap.add(labelButton1);
 		panelMenuMap.add(labelButton2);
 		panelMenuMap.add(labelButton3);
@@ -465,6 +468,7 @@ public class AplikacjaMW050116MainClass {
 		panelMenuMap.add(labelButton10);
 		panelMenuMap.add(labelButton11);
 		panelMenuMap.add(labelButton12);
+		panelMenuMap.add(labelButton13);
 		lblNewLabel.setIcon(lblNewLabelImage);
 		lblNewLabel.setBounds(0, 0, 640, 480);
 		panelMainMenu.add(lblNewLabel);
@@ -806,13 +810,23 @@ public class AplikacjaMW050116MainClass {
 		panelMenuMap.add(btnWarheadJunction);
 		
 		JButton btnExit = new JButton("Exit");
-		btnExit.setBounds(270, 300, 89, 23);
+
+		btnExit.setBounds(250, 300, 160, 40);
 		btnExit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				panelMenuMap.setVisible(false);
 				panelMainMenu.setVisible(true);
 				label.setIcon(lblNewLabelImage);
 			}
+
+		});
+		btnExit.addMouseListener(new MouseAdapter() {
+			public void mouseExited(MouseEvent arg0) {
+				labelButton13.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_On.png")));
+				}
+			public void mouseEntered(MouseEvent e) {
+				labelButton13.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_Off.png")));
+				}
 		});
 		transparentButton(btnExit);
 		panelMenuMap.add(btnExit);
