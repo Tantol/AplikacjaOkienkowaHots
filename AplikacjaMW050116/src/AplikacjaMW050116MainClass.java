@@ -330,7 +330,16 @@ public class AplikacjaMW050116MainClass {
 		});
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				System.exit(0);
+				EventQueue.invokeLater(new Runnable() {
+					public void run() {
+						try {
+							AplikacjaMW050116MainClass window = new AplikacjaMW050116MainClass();
+							window.frmNoTitleYet.setVisible(true);
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+					}
+				});
 			}
 		});
 		
