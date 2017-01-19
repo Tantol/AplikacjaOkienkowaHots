@@ -311,6 +311,29 @@ public class AplikacjaMW050116MainClass {
 		textPane_18.setOpaque(false);
 		panelMenuInfo.add(textPane_18);
 		
+		JLabel lblbtnNewButton = new JLabel("");
+		lblbtnNewButton.setBounds(427, 280, 160, 40);
+		lblbtnNewButton.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_On.png")));
+		panelMenuInfo.add(lblbtnNewButton);
+		
+		
+		JButton btnNewButton = new JButton("Get New Composition");
+		btnNewButton.setBounds(427, 280, 160, 40);
+		panelMenuInfo.add(btnNewButton);
+		btnNewButton.addMouseListener(new MouseAdapter() {
+			public void mouseEntered(MouseEvent e) {
+				btnNewButton.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_Off.png")));
+				}
+			public void mouseExited(MouseEvent arg0) {
+				btnNewButton.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_On.png")));
+				}
+		});
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				System.exit(0);
+			}
+		});
+		
 		
 		JLabel lblNewLabel_1 = new JLabel("New label");
 		lblNewLabel_1.setBounds(0, 0, 640, 480);
