@@ -36,6 +36,9 @@ public class AplikacjaMW050116MainClass {
 	private JComboBox comboBox_2;
 	private Object wiaderko=null;
 	private int lastButton=0;
+	private int lastButtonMap=0;
+	private JButton btnDONE;
+	private JLabel labelButtonDONE;
 
 	/**
 	 * Launch the application.
@@ -97,10 +100,17 @@ public class AplikacjaMW050116MainClass {
 		labelButtonChooseMap.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_On.png")));
 		labelButtonChooseMap.setBounds(233, 10, 160, 40);
 		panelMainMenu.add(labelButtonChooseMap);
+		
 		JLabel labelButtonGetOut = new JLabel("");
 		labelButtonGetOut.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_On.png")));
 		labelButtonGetOut.setBounds(10, 400, 160, 40);
 		panelMainMenu.add(labelButtonGetOut);
+		
+		JLabel labelButtonDONE = new JLabel("");
+		labelButtonDONE.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_On.png")));
+		labelButtonDONE.setBounds(226, 114, 160, 40);
+		panelMainMenu.add(labelButtonDONE);
+		labelButtonDONE.setVisible(false);
 		
 		JButton btnChooseMap = new JButton("Choose Map");
 		btnChooseMap.addMouseListener(new MouseAdapter() {
@@ -114,6 +124,7 @@ public class AplikacjaMW050116MainClass {
 		});
 		btnChooseMap.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				lastButtonMap++;
 				panelMenuMap.setVisible(true);
 				panelMainMenu.setVisible(false);
 			}
@@ -143,13 +154,21 @@ public class AplikacjaMW050116MainClass {
 		panelMainMenu.add(btnEnd);
 		
 		JButton btnDONE = new JButton("DONE !!");
+		btnDONE.addMouseListener(new MouseAdapter() {
+			public void mouseEntered(MouseEvent e) {
+				labelButtonDONE.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_Off.png")));
+				}
+			public void mouseExited(MouseEvent arg0) {
+				labelButtonDONE.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_On.png")));
+				}
+		});
 		btnDONE.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				panelMainMenu.setVisible(false);
 				panelMenuInfo.setVisible(true);
 			}
 		});
-		btnDONE.setBounds(226, 114, 180, 98);
+		btnDONE.setBounds(226, 114, 160, 40);
 		transparentButton(btnDONE);
 		panelMainMenu.add(btnDONE);
 		btnDONE.setVisible(false);
@@ -438,7 +457,7 @@ public class AplikacjaMW050116MainClass {
 				 comboBox_10.setVisible(false);
 				 textPane_10.setVisible(true);
 				 textPane_10.setText((String)comboBox_10.getSelectedItem());}
-				if(lastButton==10){btnDONE.setVisible(true);}
+				if(lastButton==10&&lastButtonMap>0){btnDONE.setVisible(true); labelButtonDONE.setVisible(true);}
 			}
 		});
 		
@@ -520,6 +539,7 @@ public class AplikacjaMW050116MainClass {
 		});
 		btnHauntedMines.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				if(lastButton==10&&lastButtonMap>0){btnDONE.setVisible(true); labelButtonDONE.setVisible(true);}
 				addBackgroundMenu(btnHauntedMines.getName());
 				lblNewLabel.setIcon(lblNewLabelImage);
 				panelMenuMap.setVisible(false);
@@ -551,6 +571,7 @@ public class AplikacjaMW050116MainClass {
 		btnTowersOfDoom.setName("Towers of Doom");
 		btnTowersOfDoom.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				if(lastButton==10&&lastButtonMap>0){btnDONE.setVisible(true); labelButtonDONE.setVisible(true);}
 				addBackgroundMenu(btnTowersOfDoom.getName());
 				lblNewLabel.setIcon(lblNewLabelImage);
 				panelMenuMap.setVisible(false);
@@ -578,6 +599,7 @@ public class AplikacjaMW050116MainClass {
 		btnInfernalShrines.setName("Infernal Shrines");
 		btnInfernalShrines.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				if(lastButton==10&&lastButtonMap>0){btnDONE.setVisible(true); labelButtonDONE.setVisible(true);}
 				addBackgroundMenu(btnInfernalShrines.getName());
 				lblNewLabel.setIcon(lblNewLabelImage);
 				panelMenuMap.setVisible(false);
@@ -605,6 +627,7 @@ public class AplikacjaMW050116MainClass {
 		btnBattlefieldOfEternity.setName("Battlefield of Eternity");
 		btnBattlefieldOfEternity.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				if(lastButton==10&&lastButtonMap>0){btnDONE.setVisible(true); labelButtonDONE.setVisible(true);}
 				addBackgroundMenu(btnBattlefieldOfEternity.getName());
 				lblNewLabel.setIcon(lblNewLabelImage);
 				panelMenuMap.setVisible(false);
@@ -633,6 +656,7 @@ public class AplikacjaMW050116MainClass {
 		btnTombOfThe.setName("Tomb of The Spider Quoeen");
 		btnTombOfThe.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				if(lastButton==10&&lastButtonMap>0){btnDONE.setVisible(true); labelButtonDONE.setVisible(true);}
 				addBackgroundMenu(btnTombOfThe.getName());
 				lblNewLabel.setIcon(lblNewLabelImage);
 				panelMenuMap.setVisible(false);
@@ -663,6 +687,7 @@ public class AplikacjaMW050116MainClass {
 		btnSkyTemple.setName("Sky Temple");
 		btnSkyTemple.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				if(lastButton==10&&lastButtonMap>0){btnDONE.setVisible(true); labelButtonDONE.setVisible(true);}
 				addBackgroundMenu(btnSkyTemple.getName());
 				lblNewLabel.setIcon(lblNewLabelImage);
 				panelMenuMap.setVisible(false);
@@ -690,6 +715,7 @@ public class AplikacjaMW050116MainClass {
 		btnGardenOfTerror.setName("Garden of Terror");
 		btnGardenOfTerror.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				if(lastButton==10&&lastButtonMap>0){btnDONE.setVisible(true); labelButtonDONE.setVisible(true);}
 				addBackgroundMenu(btnGardenOfTerror.getName());
 				lblNewLabel.setIcon(lblNewLabelImage);
 				panelMenuMap.setVisible(false);
@@ -717,6 +743,7 @@ public class AplikacjaMW050116MainClass {
 		btnBlackheartsBay.setName("Blackheart's Bay");
 		btnBlackheartsBay.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				if(lastButton==10&&lastButtonMap>0){btnDONE.setVisible(true); labelButtonDONE.setVisible(true);}
 				addBackgroundMenu(btnBlackheartsBay.getName());
 				lblNewLabel.setIcon(lblNewLabelImage);
 				panelMenuMap.setVisible(false);
@@ -744,6 +771,7 @@ public class AplikacjaMW050116MainClass {
 		btnDragonShire.setName("Dragon Shire");
 		btnDragonShire.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				if(lastButton==10&&lastButtonMap>0){btnDONE.setVisible(true); labelButtonDONE.setVisible(true);}
 				addBackgroundMenu(btnDragonShire.getName());
 				lblNewLabel.setIcon(lblNewLabelImage);
 				panelMenuMap.setVisible(false);
@@ -771,6 +799,7 @@ public class AplikacjaMW050116MainClass {
 		btnCursedHollow.setName("Cursed Hollow");
 		btnCursedHollow.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				if(lastButton==10&&lastButtonMap>0){btnDONE.setVisible(true); labelButtonDONE.setVisible(true);}
 				addBackgroundMenu(btnCursedHollow.getName());
 				lblNewLabel.setIcon(lblNewLabelImage);
 				panelMenuMap.setVisible(false);
@@ -798,6 +827,7 @@ public class AplikacjaMW050116MainClass {
 		btnBraxisHoldout.setName("Braxis Holdout");
 		btnBraxisHoldout.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				if(lastButton==10&&lastButtonMap>0){btnDONE.setVisible(true); labelButtonDONE.setVisible(true);}
 				addBackgroundMenu(btnBraxisHoldout.getName());
 				lblNewLabel.setIcon(lblNewLabelImage);
 				panelMenuMap.setVisible(false);
@@ -825,11 +855,13 @@ public class AplikacjaMW050116MainClass {
 		btnWarheadJunction.setName("Warhead Junction");
 		btnWarheadJunction.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				if(lastButton==10&&lastButtonMap>0){btnDONE.setVisible(true); labelButtonDONE.setVisible(true);}
 				addBackgroundMenu(btnWarheadJunction.getName());
 				lblNewLabel.setIcon(lblNewLabelImage);
 				panelMenuMap.setVisible(false);
 				panelMainMenu.setVisible(true);
 				btnChooseMap.setText("Warhead Junction");
+				
 			}
 		});
 		transparentButton(btnWarheadJunction);
@@ -840,6 +872,7 @@ public class AplikacjaMW050116MainClass {
 		btnExit.setBounds(10, 400, 160, 40);
 		btnExit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				lastButtonMap--;
 				panelMenuMap.setVisible(false);
 				panelMainMenu.setVisible(true);
 				label.setIcon(lblNewLabelImage);
