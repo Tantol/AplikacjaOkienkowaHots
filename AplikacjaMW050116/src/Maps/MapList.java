@@ -29,7 +29,7 @@ public class MapList {
 	hauntedMines.setTowerHP(0);
 	hauntedMines.setTowers(0);
 	// Towers of Doom
-	towersOfDoom.setName("Towers Of Dooms");
+	towersOfDoom.setName("Towers Of Doom");
 	towersOfDoom.setLanes(0);
 	towersOfDoom.setCoreHP(0);
 	towersOfDoom.setCoreShieldHP(0);
@@ -71,6 +71,7 @@ public class MapList {
 	battlefieldOfEternity.setTowerHP(0);
 	battlefieldOfEternity.setTowers(0);
 	// Tomb Of The Spider Queen
+	tombOfTheSpiderQueen.setName("Tomb of The Spider Quoeen");
 	tombOfTheSpiderQueen.setLanes(0);
 	tombOfTheSpiderQueen.setCoreHP(0);
 	tombOfTheSpiderQueen.setCoreShieldHP(0);
@@ -98,7 +99,7 @@ public class MapList {
 	skyTemple.setTowerHP(0);
 	skyTemple.setTowers(0);
 	// Gareden of Terror
-	gardenOfTerror.setName("Gareden of Terror");
+	gardenOfTerror.setName("Garden Of Terror");
 	gardenOfTerror.setLanes(0);
 	gardenOfTerror.setCoreHP(0);
 	gardenOfTerror.setCoreShieldHP(0);

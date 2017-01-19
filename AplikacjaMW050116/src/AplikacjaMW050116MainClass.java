@@ -45,6 +45,7 @@ public class AplikacjaMW050116MainClass {
 	private int lastButtonMap=0;
 	private JButton btnDONE;
 	private JLabel labelButtonDONE;
+	private MapList mapy = new MapList();
 
 	/**
 	 * Launch the application.
@@ -633,9 +634,9 @@ public class AplikacjaMW050116MainClass {
 		label.setBounds(0, 0, 640, 480);
 		label.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/tlo.jpg")));
 		
-		JButton btnHauntedMines = new JButton("Haunted Mines");
+		JButton btnHauntedMines = new JButton(mapy.hauntedMines.getName());
 		btnHauntedMines.setBounds(160, 80, 160, 40);
-		btnHauntedMines.setName("Haunted Mines");
+		btnHauntedMines.setName(mapy.hauntedMines.getName());
 		btnHauntedMines.addMouseListener(new MouseAdapter() {
 			public void mouseEntered(MouseEvent arg0) {
 				addBackgroundMap(btnHauntedMines.getName());
@@ -665,15 +666,13 @@ public class AplikacjaMW050116MainClass {
 		panelMenuMap.add(btnHauntedMines);
 		
 		
-		JButton btnTowersOfDoom = new JButton("Towers of Doom");
+		JButton btnTowersOfDoom = new JButton(mapy.towersOfDoom.getName());
 		btnTowersOfDoom.setBounds(320, 40, 160, 40);
 		btnTowersOfDoom.addMouseListener(new MouseAdapter() {
 			public void mouseEntered(MouseEvent arg0) {
 				addBackgroundMap(btnTowersOfDoom.getName());
 				labelButton6.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_Off.png")));
 				label.setIcon(labelImage);
-				MapList mapy = new MapList();
-				System.out.println(mapy.hauntedMines.getName());
 			}
 			public void mouseExited(MouseEvent arg0) {
 				addBackgroundMap(btnTowersOfDoom.getName());
@@ -681,7 +680,7 @@ public class AplikacjaMW050116MainClass {
 				label.setIcon(labelImage);
 				}
 		});
-		btnTowersOfDoom.setName("Towers of Doom");
+		btnTowersOfDoom.setName(mapy.towersOfDoom.getName());
 		btnTowersOfDoom.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(lastButton==10&&lastButtonMap>0){btnDONE.setVisible(true); labelButtonDONE.setVisible(true);}
@@ -695,7 +694,7 @@ public class AplikacjaMW050116MainClass {
 		transparentButton(btnTowersOfDoom);
 		panelMenuMap.add(btnTowersOfDoom);
 		
-		JButton btnInfernalShrines = new JButton("Infernal Shrines");
+		JButton btnInfernalShrines = new JButton(mapy.infernalShrines.getName());
 		btnInfernalShrines.setBounds(480, 40, 160, 40);
 		btnInfernalShrines.addMouseListener(new MouseAdapter() {
 			public void mouseEntered(MouseEvent e) {
@@ -709,7 +708,7 @@ public class AplikacjaMW050116MainClass {
 				label.setIcon(labelImage);
 				}
 		});
-		btnInfernalShrines.setName("Infernal Shrines");
+		btnInfernalShrines.setName(mapy.infernalShrines.getName());
 		btnInfernalShrines.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(lastButton==10&&lastButtonMap>0){btnDONE.setVisible(true); labelButtonDONE.setVisible(true);}
@@ -723,7 +722,7 @@ public class AplikacjaMW050116MainClass {
 		transparentButton(btnInfernalShrines);
 		panelMenuMap.add(btnInfernalShrines);
 		
-		JButton btnBattlefieldOfEternity = new JButton("Battlefield of Eternity");
+		JButton btnBattlefieldOfEternity = new JButton(mapy.battlefieldOfEternity.getName());
 		btnBattlefieldOfEternity.setBounds(160, 0, 160, 40);
 		btnBattlefieldOfEternity.addMouseListener(new MouseAdapter() {
 			public void mouseEntered(MouseEvent e) {
@@ -737,7 +736,7 @@ public class AplikacjaMW050116MainClass {
 				label.setIcon(labelImage);
 				}
 		});
-		btnBattlefieldOfEternity.setName("Battlefield of Eternity");
+		btnBattlefieldOfEternity.setName(mapy.battlefieldOfEternity.getName());
 		btnBattlefieldOfEternity.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(lastButton==10&&lastButtonMap>0){btnDONE.setVisible(true); labelButtonDONE.setVisible(true);}
@@ -751,7 +750,7 @@ public class AplikacjaMW050116MainClass {
 		transparentButton(btnBattlefieldOfEternity);
 		panelMenuMap.add(btnBattlefieldOfEternity);
 		
-		JButton btnTombOfThe = new JButton("Tomb of The Spider Queen");
+		JButton btnTombOfThe = new JButton(mapy.tombOfTheSpiderQueen.getName());
 		btnTombOfThe.setBounds(0, 0, 160, 40);
 		btnTombOfThe.addMouseListener(new MouseAdapter() {
 			public void mouseEntered(MouseEvent e) {
@@ -766,7 +765,7 @@ public class AplikacjaMW050116MainClass {
 				label.setIcon(labelImage);
 				}
 		});
-		btnTombOfThe.setName("Tomb of The Spider Quoeen");
+		btnTombOfThe.setName(mapy.tombOfTheSpiderQueen.getName());
 		btnTombOfThe.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(lastButton==10&&lastButtonMap>0){btnDONE.setVisible(true); labelButtonDONE.setVisible(true);}
@@ -782,7 +781,7 @@ public class AplikacjaMW050116MainClass {
 		transparentButton(btnTombOfThe);
 		panelMenuMap.add(btnTombOfThe);
 		
-		JButton btnSkyTemple = new JButton("Sky Temple");
+		JButton btnSkyTemple = new JButton(mapy.skyTemple.getName());
 		btnSkyTemple.setBounds(320, 80, 160, 40);
 		btnSkyTemple.addMouseListener(new MouseAdapter() {
 			public void mouseEntered(MouseEvent e) {
@@ -797,7 +796,7 @@ public class AplikacjaMW050116MainClass {
 				}
 
 		});
-		btnSkyTemple.setName("Sky Temple");
+		btnSkyTemple.setName(mapy.skyTemple.getName());
 		btnSkyTemple.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(lastButton==10&&lastButtonMap>0){btnDONE.setVisible(true); labelButtonDONE.setVisible(true);}
@@ -811,7 +810,7 @@ public class AplikacjaMW050116MainClass {
 		transparentButton(btnSkyTemple);
 		panelMenuMap.add(btnSkyTemple);
 		
-		JButton btnGardenOfTerror = new JButton("Garden of Terror");
+		JButton btnGardenOfTerror = new JButton(mapy.gardenOfTerror.getName());
 		btnGardenOfTerror.setBounds(480, 80, 160, 40);
 		btnGardenOfTerror.addMouseListener(new MouseAdapter() {
 			public void mouseEntered(MouseEvent e) {
@@ -825,7 +824,7 @@ public class AplikacjaMW050116MainClass {
 				label.setIcon(labelImage);
 				}
 		});
-		btnGardenOfTerror.setName("Garden of Terror");
+		btnGardenOfTerror.setName(mapy.gardenOfTerror.getName());
 		btnGardenOfTerror.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(lastButton==10&&lastButtonMap>0){btnDONE.setVisible(true); labelButtonDONE.setVisible(true);}
@@ -839,7 +838,7 @@ public class AplikacjaMW050116MainClass {
 		transparentButton(btnGardenOfTerror);
 		panelMenuMap.add(btnGardenOfTerror);
 		
-		JButton btnBlackheartsBay = new JButton("Blackheart's Bay");
+		JButton btnBlackheartsBay = new JButton(mapy.blackheartsBay.getName());
 		btnBlackheartsBay.setBounds(320, 0, 160, 40);
 		btnBlackheartsBay.addMouseListener(new MouseAdapter() {
 			public void mouseEntered(MouseEvent e) {
@@ -853,7 +852,7 @@ public class AplikacjaMW050116MainClass {
 				label.setIcon(labelImage);
 				}
 		});
-		btnBlackheartsBay.setName("Blackheart's Bay");
+		btnBlackheartsBay.setName(mapy.blackheartsBay.getName());
 		btnBlackheartsBay.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(lastButton==10&&lastButtonMap>0){btnDONE.setVisible(true); labelButtonDONE.setVisible(true);}
@@ -867,7 +866,7 @@ public class AplikacjaMW050116MainClass {
 		transparentButton(btnBlackheartsBay);
 		panelMenuMap.add(btnBlackheartsBay);
 		
-		JButton btnDragonShire = new JButton("Dragon Shire");
+		JButton btnDragonShire = new JButton(mapy.dragonShire.getName());
 		btnDragonShire.setBounds(0, 40, 160, 40);
 		btnDragonShire.addMouseListener(new MouseAdapter() {
 			public void mouseEntered(MouseEvent e) {
@@ -881,7 +880,7 @@ public class AplikacjaMW050116MainClass {
 				label.setIcon(labelImage);
 				}
 		});
-		btnDragonShire.setName("Dragon Shire");
+		btnDragonShire.setName(mapy.dragonShire.getName());
 		btnDragonShire.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(lastButton==10&&lastButtonMap>0){btnDONE.setVisible(true); labelButtonDONE.setVisible(true);}
@@ -895,7 +894,7 @@ public class AplikacjaMW050116MainClass {
 		transparentButton(btnDragonShire);
 		panelMenuMap.add(btnDragonShire);
 		
-		JButton btnCursedHollow = new JButton("Cursed Hollow");
+		JButton btnCursedHollow = new JButton(mapy.cursedHollow.getName());
 		btnCursedHollow.setBounds(0, 80, 160, 40);
 		btnCursedHollow.addMouseListener(new MouseAdapter() {
 			public void mouseEntered(MouseEvent e) {
@@ -909,7 +908,7 @@ public class AplikacjaMW050116MainClass {
 				label.setIcon(labelImage);
 				}
 		});
-		btnCursedHollow.setName("Cursed Hollow");
+		btnCursedHollow.setName(mapy.cursedHollow.getName());
 		btnCursedHollow.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(lastButton==10&&lastButtonMap>0){btnDONE.setVisible(true); labelButtonDONE.setVisible(true);}
@@ -923,7 +922,7 @@ public class AplikacjaMW050116MainClass {
 		transparentButton(btnCursedHollow);
 		panelMenuMap.add(btnCursedHollow);
 		
-		JButton btnBraxisHoldout = new JButton("Braxis Holdout");
+		JButton btnBraxisHoldout = new JButton(mapy.braxisHoldout.getName());
 		btnBraxisHoldout.setBounds(160, 40, 160, 40);
 		btnBraxisHoldout.addMouseListener(new MouseAdapter() {
 			public void mouseEntered(MouseEvent e) {
@@ -937,7 +936,7 @@ public class AplikacjaMW050116MainClass {
 				label.setIcon(labelImage);
 				}
 		});
-		btnBraxisHoldout.setName("Braxis Holdout");
+		btnBraxisHoldout.setName(mapy.braxisHoldout.getName());
 		btnBraxisHoldout.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(lastButton==10&&lastButtonMap>0){btnDONE.setVisible(true); labelButtonDONE.setVisible(true);}
@@ -951,7 +950,7 @@ public class AplikacjaMW050116MainClass {
 		transparentButton(btnBraxisHoldout);
 		panelMenuMap.add(btnBraxisHoldout);
 		
-		JButton btnWarheadJunction = new JButton("Warhead Junction");
+		JButton btnWarheadJunction = new JButton(mapy.warheadJunction.getName());
 		btnWarheadJunction.setBounds(480, 0, 160, 40);
 		btnWarheadJunction.addMouseListener(new MouseAdapter() {
 			public void mouseEntered(MouseEvent e) {
@@ -965,7 +964,7 @@ public class AplikacjaMW050116MainClass {
 				label.setIcon(labelImage);
 				}
 		});
-		btnWarheadJunction.setName("Warhead Junction");
+		btnWarheadJunction.setName(mapy.warheadJunction.getName());
 		btnWarheadJunction.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(lastButton==10&&lastButtonMap>0){btnDONE.setVisible(true); labelButtonDONE.setVisible(true);}
