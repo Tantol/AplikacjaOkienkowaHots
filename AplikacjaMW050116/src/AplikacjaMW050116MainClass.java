@@ -91,6 +91,26 @@ public class AplikacjaMW050116MainClass {
 		frmNoTitleYet.getContentPane().add(panelMenuInfo, "name_470414835695040");
 		panelMenuInfo.setLayout(null);
 		
+		JButton btnChampion_1 = new JButton("btnChampion_1");
+		btnChampion_1.setBounds(49, 44, 100, 200);
+		panelMenuInfo.add(btnChampion_1);
+		
+		JButton btnChampion_2 = new JButton("btnChampion_2");
+		btnChampion_2.setBounds(159, 44, 100, 200);
+		panelMenuInfo.add(btnChampion_2);
+		
+		JButton btnChampion_3 = new JButton("btnChampion_3");
+		btnChampion_3.setBounds(269, 44, 100, 200);
+		panelMenuInfo.add(btnChampion_3);
+		
+		JButton btnChampion_4 = new JButton("btnChampion_4");
+		btnChampion_4.setBounds(379, 44, 100, 200);
+		panelMenuInfo.add(btnChampion_4);
+		
+		JButton btnChampion_5 = new JButton("btnChampion_5");
+		btnChampion_5.setBounds(489, 44, 100, 200);
+		panelMenuInfo.add(btnChampion_5);
+		
 		JLabel lblNewLabel_1 = new JLabel("New label");
 		lblNewLabel_1.setBounds(0, 0, 640, 480);
 		panelMenuInfo.add(lblNewLabel_1);
@@ -515,6 +535,25 @@ public class AplikacjaMW050116MainClass {
 		panelMenuMap.add(labelButton11);
 		panelMenuMap.add(labelButton12);
 		panelMenuMap.add(labelButton13);
+		
+		JTextPane textPane_11 = new JTextPane();
+		textPane_11.setBounds(36, 52, 106, 20);
+		textPane_11.setEditable(false);
+		textPane_11.setForeground(new Color(0, 255, 255));
+		textPane_11.setBorder(null);
+		textPane_11.setOpaque(false);
+		textPane_11.setText("FRIENDLY TEAM");
+		panelMainMenu.add(textPane_11);
+		
+		JTextPane textPane_12 = new JTextPane();
+		textPane_12.setBounds(518, 52, 106, 20);
+		textPane_12.setEditable(false);
+		textPane_12.setForeground(new Color(0, 255, 255));
+		textPane_12.setBorder(null);
+		textPane_12.setOpaque(false);
+		textPane_12.setText("ENEMY TEAM");
+		panelMainMenu.add(textPane_12);
+		
 		lblNewLabel.setIcon(lblNewLabelImage);
 		lblNewLabel.setBounds(0, 0, 640, 480);
 		panelMainMenu.add(lblNewLabel);
