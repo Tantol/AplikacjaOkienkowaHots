@@ -22,6 +22,10 @@ import java.awt.event.ContainerAdapter;
 import java.awt.event.ContainerEvent;
 import javax.swing.JList;
 import javax.swing.JTextPane;
+
+import Maps.MapList;
+import Maps.*;
+
 import javax.swing.DropMode;
 import java.awt.Font;
 
@@ -93,23 +97,63 @@ public class AplikacjaMW050116MainClass {
 		frmNoTitleYet.getContentPane().add(panelMenuInfo, "name_470414835695040");
 		panelMenuInfo.setLayout(null);
 		
-		JButton btnChampion_1 = new JButton("btnChampion_1");
+		JButton btnChampion_1 = new JButton();
+		btnChampion_1.addMouseListener(new MouseAdapter() {
+			public void mouseEntered(MouseEvent arg0) {
+				btnChampion_1.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+(String)btnChampion_1.getName()+"_On.png")));
+			}
+			public void mouseExited(MouseEvent e) {
+				btnChampion_1.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+(String)btnChampion_1.getName()+"_Off.png")));
+			}
+		});
 		btnChampion_1.setBounds(49, 44, 100, 200);
 		panelMenuInfo.add(btnChampion_1);
 		
-		JButton btnChampion_2 = new JButton("btnChampion_2");
+		JButton btnChampion_2 = new JButton();
+		btnChampion_2.addMouseListener(new MouseAdapter() {
+			public void mouseEntered(MouseEvent arg0) {
+				btnChampion_2.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+(String)btnChampion_2.getName()+"_On.png")));
+			}
+			public void mouseExited(MouseEvent e) {
+				btnChampion_2.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+(String)btnChampion_2.getName()+"_Off.png")));
+			}
+		});
 		btnChampion_2.setBounds(159, 44, 100, 200);
 		panelMenuInfo.add(btnChampion_2);
 		
-		JButton btnChampion_3 = new JButton("btnChampion_3");
+		JButton btnChampion_3 = new JButton();
+		btnChampion_3.addMouseListener(new MouseAdapter() {
+			public void mouseEntered(MouseEvent arg0) {
+				btnChampion_3.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+(String)btnChampion_3.getName()+"_On.png")));
+			}
+			public void mouseExited(MouseEvent e) {
+				btnChampion_3.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+(String)btnChampion_3.getName()+"_Off.png")));
+			}
+		});
 		btnChampion_3.setBounds(269, 44, 100, 200);
 		panelMenuInfo.add(btnChampion_3);
 		
-		JButton btnChampion_4 = new JButton("btnChampion_4");
+		JButton btnChampion_4 = new JButton();
+		btnChampion_4.addMouseListener(new MouseAdapter() {
+			public void mouseEntered(MouseEvent arg0) {
+				btnChampion_4.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+(String)btnChampion_4.getName()+"_On.png")));
+			}
+			public void mouseExited(MouseEvent e) {
+				btnChampion_4.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+(String)btnChampion_4.getName()+"_Off.png")));
+			}
+		});
 		btnChampion_4.setBounds(379, 44, 100, 200);
 		panelMenuInfo.add(btnChampion_4);
 		
-		JButton btnChampion_5 = new JButton("btnChampion_5");
+		JButton btnChampion_5 = new JButton();
+		btnChampion_5.addMouseListener(new MouseAdapter() {
+			public void mouseEntered(MouseEvent arg0) {
+				btnChampion_5.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+(String)btnChampion_5.getName()+"_On.png")));
+			}
+			public void mouseExited(MouseEvent e) {
+				btnChampion_5.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+(String)btnChampion_5.getName()+"_Off.png")));
+			}
+		});
 		btnChampion_5.setBounds(489, 44, 100, 200);
 		panelMenuInfo.add(btnChampion_5);
 		
@@ -383,7 +427,10 @@ public class AplikacjaMW050116MainClass {
 				 comboBox_5.removeItem(comboBox_1.getSelectedItem());
 				 comboBox_1.setVisible(false);
 				 textPane_1.setVisible(true);
-				 textPane_1.setText((String)comboBox_1.getSelectedItem());}
+				 textPane_1.setText((String)comboBox_1.getSelectedItem());
+				 btnChampion_1.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+(String)comboBox_1.getSelectedItem()+"_Off.png")));
+				 btnChampion_1.setName((String)comboBox_1.getSelectedItem());
+				}
 			}
 		});
 		
@@ -396,7 +443,10 @@ public class AplikacjaMW050116MainClass {
 				 comboBox_5.removeItem(comboBox_2.getSelectedItem());
 				 comboBox_2.setVisible(false);
 				 textPane_2.setVisible(true);
-				 textPane_2.setText((String)comboBox_2.getSelectedItem());}
+				 textPane_2.setText((String)comboBox_2.getSelectedItem());
+				 btnChampion_2.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+(String)comboBox_2.getSelectedItem()+"_Off.png")));
+				 btnChampion_2.setName((String)comboBox_2.getSelectedItem()); 
+				}
 			}
 		});
 		
@@ -408,7 +458,10 @@ public class AplikacjaMW050116MainClass {
 				 comboBox_5.removeItem(comboBox_3.getSelectedItem());
 				 comboBox_3.setVisible(false);
 				 textPane_3.setVisible(true);
-				 textPane_3.setText((String)comboBox_3.getSelectedItem());}
+				 textPane_3.setText((String)comboBox_3.getSelectedItem());
+				 btnChampion_3.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+(String)comboBox_3.getSelectedItem()+"_Off.png")));
+				 btnChampion_3.setName((String)comboBox_3.getSelectedItem());
+				}
 			}
 		});
 		
@@ -419,7 +472,10 @@ public class AplikacjaMW050116MainClass {
 				 comboBox_5.removeItem(comboBox_4.getSelectedItem());
 				 comboBox_4.setVisible(false);
 				 textPane_4.setVisible(true);
-				 textPane_4.setText((String)comboBox_4.getSelectedItem());}
+				 textPane_4.setText((String)comboBox_4.getSelectedItem());
+				 btnChampion_4.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+(String)comboBox_4.getSelectedItem()+"_Off.png")));
+				 btnChampion_4.setName((String)comboBox_4.getSelectedItem());
+				}
 			}
 		});
 		
@@ -429,7 +485,10 @@ public class AplikacjaMW050116MainClass {
 					lastButton++;
 				 comboBox_5.setVisible(false);
 				 textPane_5.setVisible(true);
-				 textPane_5.setText((String)comboBox_5.getSelectedItem());}
+				 textPane_5.setText((String)comboBox_5.getSelectedItem());
+				 btnChampion_5.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/"+(String)comboBox_5.getSelectedItem()+"_Off.png")));
+				 btnChampion_5.setName((String)comboBox_5.getSelectedItem());
+				}
 			}
 		});
 		
