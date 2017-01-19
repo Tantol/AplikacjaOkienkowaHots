@@ -35,7 +35,7 @@ public class AplikacjaMW050116MainClass {
 	private ImageIcon lblNewLabelImage;
 	private JComboBox comboBox_2;
 	private Object wiaderko=null;
-	private int i=0;
+	private int lastButton=0;
 
 	/**
 	 * Launch the application.
@@ -88,6 +88,10 @@ public class AplikacjaMW050116MainClass {
 		JPanel panelMenuInfo = new JPanel();
 		frmNoTitleYet.getContentPane().add(panelMenuInfo, "name_470414835695040");
 		panelMenuInfo.setLayout(null);
+		
+		JButton btnNewButton = new JButton("New button");
+		btnNewButton.setBounds(122, 75, 321, 181);
+		panelMenuInfo.add(btnNewButton);
 		panelMenuInfo.setVisible(false);
 		
 		JButton btnChooseMap = new JButton("Choose Map");
@@ -112,6 +116,18 @@ public class AplikacjaMW050116MainClass {
 		btnEnd.setBounds(251, 342, 106, 55);
 		transparentButton(btnEnd);
 		panelMainMenu.add(btnEnd);
+		
+		JButton btnDONE = new JButton("DONE !!");
+		btnDONE.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				panelMainMenu.setVisible(false);
+				panelMenuInfo.setVisible(true);
+			}
+		});
+		btnDONE.setBounds(226, 114, 180, 98);
+		transparentButton(btnDONE);
+		panelMainMenu.add(btnDONE);
+		btnDONE.setVisible(false);
 		
 		JTextPane textPane_1 = new JTextPane();
 		textPane_1.setBounds(36, 83, 106, 20);
@@ -283,6 +299,7 @@ public class AplikacjaMW050116MainClass {
 		comboBox_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if((String)comboBox_1.getSelectedItem()!=championNamesTeam[0]){
+					lastButton++;
 				 comboBox_2.removeItem(comboBox_1.getSelectedItem());
 				 comboBox_3.removeItem(comboBox_1.getSelectedItem());
 				 comboBox_4.removeItem(comboBox_1.getSelectedItem());
@@ -296,6 +313,7 @@ public class AplikacjaMW050116MainClass {
 		comboBox_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if((String)comboBox_2.getSelectedItem()!=championNamesTeam[0]){
+					lastButton++;
 				 comboBox_3.removeItem(comboBox_2.getSelectedItem());
 				 comboBox_4.removeItem(comboBox_2.getSelectedItem());
 				 comboBox_5.removeItem(comboBox_2.getSelectedItem());
@@ -308,6 +326,7 @@ public class AplikacjaMW050116MainClass {
 		comboBox_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if((String)comboBox_3.getSelectedItem()!=championNamesTeam[0]){
+					lastButton++;
 				 comboBox_4.removeItem(comboBox_3.getSelectedItem());
 				 comboBox_5.removeItem(comboBox_3.getSelectedItem());
 				 comboBox_3.setVisible(false);
@@ -319,6 +338,7 @@ public class AplikacjaMW050116MainClass {
 		comboBox_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if((String)comboBox_4.getSelectedItem()!=championNamesTeam[0]){
+					lastButton++;
 				 comboBox_5.removeItem(comboBox_4.getSelectedItem());
 				 comboBox_4.setVisible(false);
 				 textPane_4.setVisible(true);
@@ -329,6 +349,7 @@ public class AplikacjaMW050116MainClass {
 		comboBox_5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if((String)comboBox_5.getSelectedItem()!=championNamesTeam[0]){
+					lastButton++;
 				 comboBox_5.setVisible(false);
 				 textPane_5.setVisible(true);
 				 textPane_5.setText((String)comboBox_5.getSelectedItem());}
@@ -338,6 +359,7 @@ public class AplikacjaMW050116MainClass {
 		comboBox_6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if((String)comboBox_6.getSelectedItem()!=championNamesTeam[0]){
+					lastButton++;
 				 comboBox_7.removeItem(comboBox_6.getSelectedItem());
 				 comboBox_8.removeItem(comboBox_6.getSelectedItem());
 				 comboBox_9.removeItem(comboBox_6.getSelectedItem());
@@ -351,6 +373,7 @@ public class AplikacjaMW050116MainClass {
 		comboBox_7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if((String)comboBox_7.getSelectedItem()!=championNamesTeam[0]){
+					lastButton++;
 				 comboBox_8.removeItem(comboBox_7.getSelectedItem());
 				 comboBox_9.removeItem(comboBox_7.getSelectedItem());
 				 comboBox_10.removeItem(comboBox_7.getSelectedItem());
@@ -363,6 +386,7 @@ public class AplikacjaMW050116MainClass {
 		comboBox_8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if((String)comboBox_8.getSelectedItem()!=championNamesTeam[0]){
+					lastButton++;
 				 comboBox_9.removeItem(comboBox_8.getSelectedItem());
 				 comboBox_10.removeItem(comboBox_8.getSelectedItem());
 				 comboBox_8.setVisible(false);
@@ -374,6 +398,7 @@ public class AplikacjaMW050116MainClass {
 		comboBox_9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if((String)comboBox_9.getSelectedItem()!=championNamesTeam[0]){
+					lastButton++;
 				 comboBox_10.removeItem(comboBox_9.getSelectedItem());
 				 comboBox_9.setVisible(false);
 				 textPane_9.setVisible(true);
@@ -384,11 +409,14 @@ public class AplikacjaMW050116MainClass {
 		comboBox_10.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if((String)comboBox_10.getSelectedItem()!=championNamesTeam[0]){
+					lastButton++;
 				 comboBox_10.setVisible(false);
 				 textPane_10.setVisible(true);
 				 textPane_10.setText((String)comboBox_10.getSelectedItem());}
+				if(lastButton==10){btnDONE.setVisible(true);}
 			}
 		});
+		
 		////
 		
 		lblNewLabel.setIcon(lblNewLabelImage);
