@@ -445,6 +445,14 @@ public class AplikacjaMW050116MainClass {
 			}
 		});
 		panelMenuMap.setLayout(null);
+		
+		JLabel labelButton1 = new JLabel("New label");
+		labelButton1.addMouseListener(new MouseAdapter() {
+			
+		});
+		labelButton1.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_On.png")));
+		labelButton1.setBounds(480, 117, 160, 40);
+		panelMenuMap.add(labelButton1);
 		transparentButton(btnHauntedMines);
 		panelMenuMap.add(btnHauntedMines);
 		
@@ -518,6 +526,9 @@ public class AplikacjaMW050116MainClass {
 				addBackgroundMap(btnTombOfThe.getName());
 				label.setIcon(labelImage);
 			}
+
+			public void mouseExited(MouseEvent e) {
+			}
 		});
 		btnTombOfThe.setName("Tomb of The Spider Quoeen");
 		btnTombOfThe.addActionListener(new ActionListener() {
@@ -529,6 +540,8 @@ public class AplikacjaMW050116MainClass {
 				btnChooseMap.setText("Tomb of The Spider Quoeen");
 			}
 		});
+		
+
 		transparentButton(btnTombOfThe);
 		panelMenuMap.add(btnTombOfThe);
 		
@@ -558,6 +571,12 @@ public class AplikacjaMW050116MainClass {
 		btnGardenOfTerror.addMouseListener(new MouseAdapter() {
 			public void mouseEntered(MouseEvent e) {
 				addBackgroundMap(btnGardenOfTerror.getName());
+				labelButton1.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_Off.png")));
+				label.setIcon(labelImage);
+			}
+			public void mouseExited(MouseEvent e) {
+				addBackgroundMap(btnGardenOfTerror.getName());
+				labelButton1.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_On.png")));
 				label.setIcon(labelImage);
 			}
 		});
@@ -690,11 +709,6 @@ public class AplikacjaMW050116MainClass {
 		});
 		transparentButton(btnExit);
 		panelMenuMap.add(btnExit);
-		
-		JLabel labelMapMenuButtons = new JLabel("New label");
-		labelMapMenuButtons.setIcon(new ImageIcon("C:\\Users\\DoneQ228\\git\\SzafaZOknem3\\AplikacjaMW050116\\bin\\resources\\Button_menu.png"));
-		labelMapMenuButtons.setBounds(0, 0, 653, 120);
-		panelMenuMap.add(labelMapMenuButtons);
 		panelMenuMap.add(label);
 		
 
