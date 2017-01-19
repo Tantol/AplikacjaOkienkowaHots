@@ -22,6 +22,8 @@ import java.awt.event.ContainerAdapter;
 import java.awt.event.ContainerEvent;
 import javax.swing.JList;
 import javax.swing.JTextPane;
+import javax.swing.DropMode;
+import java.awt.Font;
 
 public class AplikacjaMW050116MainClass {
 
@@ -110,6 +112,16 @@ public class AplikacjaMW050116MainClass {
 		JButton btnChampion_5 = new JButton("btnChampion_5");
 		btnChampion_5.setBounds(489, 44, 100, 200);
 		panelMenuInfo.add(btnChampion_5);
+		
+		JTextPane textPane = new JTextPane();
+		textPane.setFont(new Font("Tahoma", Font.BOLD, 15));
+		textPane.setEditable(false);
+		textPane.setBounds(232, 13, 320, 20);
+		textPane.setForeground(new Color(0, 255, 255));
+		textPane.setBorder(null);
+		textPane.setOpaque(false);
+		textPane.setText("Choose your champion");
+		panelMenuInfo.add(textPane);
 		
 		JLabel lblNewLabel_1 = new JLabel("New label");
 		lblNewLabel_1.setBounds(0, 0, 640, 480);
