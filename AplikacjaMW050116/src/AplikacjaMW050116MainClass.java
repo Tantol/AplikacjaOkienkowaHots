@@ -20,6 +20,8 @@ import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
 import java.awt.event.ContainerAdapter;
 import java.awt.event.ContainerEvent;
+import javax.swing.JList;
+import javax.swing.JTextPane;
 
 public class AplikacjaMW050116MainClass {
 
@@ -31,6 +33,9 @@ public class AplikacjaMW050116MainClass {
 	private JLabel lblNewLabel;
 	private ImageIcon labelImage;
 	private ImageIcon lblNewLabelImage;
+	private JComboBox comboBox_2;
+	private Object wiaderko=null;
+	private int i=0;
 
 	/**
 	 * Launch the application.
@@ -93,6 +98,7 @@ public class AplikacjaMW050116MainClass {
 			}
 		});
 		
+		
 		btnChooseMap.setBounds(226, 11, 170, 39);
 		transparentButton(btnChooseMap);
 		panelMainMenu.add(btnChooseMap);
@@ -107,80 +113,283 @@ public class AplikacjaMW050116MainClass {
 		transparentButton(btnEnd);
 		panelMainMenu.add(btnEnd);
 		
+		JTextPane textPane_1 = new JTextPane();
+		textPane_1.setBounds(36, 83, 106, 20);
+		textPane_1.setEditable(false);
+		textPane_1.setForeground(new Color(0, 255, 255));
+		textPane_1.setBorder(null);
+		textPane_1.setOpaque(false);
+		panelMainMenu.add(textPane_1);
+		textPane_1.setVisible(false);
+		
+		JTextPane textPane_2 = new JTextPane();
+		textPane_2.setBounds(36, 114, 106, 20);
+		textPane_2.setEditable(false);
+		textPane_2.setForeground(new Color(0, 255, 255));
+		textPane_2.setBorder(null);
+		textPane_2.setOpaque(false);
+		panelMainMenu.add(textPane_2);
+		textPane_2.setVisible(false);
+		
+		JTextPane textPane_3 = new JTextPane();
+		textPane_3.setBounds(36, 145, 106, 20);
+		textPane_3.setEditable(false);
+		textPane_3.setForeground(new Color(0, 255, 255));
+		textPane_3.setBorder(null);
+		textPane_3.setOpaque(false);
+		panelMainMenu.add(textPane_3);
+		textPane_3.setVisible(false);
+		
+		JTextPane textPane_4 = new JTextPane();
+		textPane_4.setBounds(36, 176, 106, 20);
+		textPane_4.setEditable(false);
+		textPane_4.setForeground(new Color(0, 255, 255));
+		textPane_4.setBorder(null);
+		textPane_4.setOpaque(false);
+		panelMainMenu.add(textPane_4);
+		textPane_4.setVisible(false);
+		
+		JTextPane textPane_5 = new JTextPane();
+		textPane_5.setBounds(36, 207, 106, 20);
+		textPane_5.setEditable(false);
+		textPane_5.setForeground(new Color(0, 255, 255));
+		textPane_5.setBorder(null);
+		textPane_5.setOpaque(false);
+		panelMainMenu.add(textPane_5);
+		textPane_5.setVisible(false);
+		
+		JTextPane textPane_6 = new JTextPane();
+		textPane_6 .setBounds(518, 83, 106, 20);
+		textPane_6 .setEditable(false);
+		textPane_6 .setForeground(new Color(0, 255, 255));
+		textPane_6 .setBorder(null);
+		textPane_6 .setOpaque(false);
+		panelMainMenu.add(textPane_6 );
+		textPane_6 .setVisible(false);
+		
+		JTextPane textPane_7 = new JTextPane();
+		textPane_7.setBounds(518, 114, 106, 20);
+		textPane_7.setEditable(false);
+		textPane_7.setForeground(new Color(0, 255, 255));
+		textPane_7.setBorder(null);
+		textPane_7.setOpaque(false);
+		panelMainMenu.add(textPane_7);
+		textPane_7.setVisible(false);
+		
+		JTextPane textPane_8 = new JTextPane();
+		textPane_8.setBounds(518, 145, 106, 20);
+		textPane_8.setEditable(false);
+		textPane_8.setForeground(new Color(0, 255, 255));
+		textPane_8.setBorder(null);
+		textPane_8.setOpaque(false);
+		panelMainMenu.add(textPane_8);
+		textPane_8.setVisible(false);
+		
+		JTextPane textPane_9 = new JTextPane();
+		textPane_9.setBounds(518, 176, 106, 20);
+		textPane_9.setEditable(false);
+		textPane_9.setForeground(new Color(0, 255, 255));
+		textPane_9.setBorder(null);
+		textPane_9.setOpaque(false);
+		panelMainMenu.add(textPane_9);
+		textPane_9.setVisible(false);
+		
+		JTextPane textPane_10 = new JTextPane();
+		textPane_10.setBounds(518, 207, 106, 20);
+		textPane_10.setEditable(false);
+		textPane_10.setForeground(new Color(0, 255, 255));
+		textPane_10.setBorder(null);
+		textPane_10.setOpaque(false);
+		panelMainMenu.add(textPane_10);
+		textPane_10.setVisible(false);
+		
+		/////////////
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabelImage=new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/tlo.jpg"));
 		
 		String[] championNamesTeam = { "Chose Character","Johanna","Artanis","Li-Li","Brightwing","Zeratul","Thrall","Jaina","Chromie","Valla","Falstad" };
 		String[] championNamesEnemy = { "Chose Character","Johanna","Artanis","Li-Li","Brightwing","Zeratul","Thrall","Jaina","Chromie","Valla","Falstad" };
-		
-		JComboBox comboBox_1 = new JComboBox(championNamesTeam);
-		comboBox_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				
-				String s = (String) comboBox_1.getSelectedItem();
-				 
-				 DefaultComboBoxModel comboModel = new DefaultComboBoxModel();
-				 comboModel.removeAllElements();
-                 
-                 for(int i = 0; i<championNamesTeam.length; i++) {
-                   comboModel.addElement(championNamesTeam[i]);  
-                 }
-				 if (s == comboBox_1.getSelectedItem()){	 
-					 comboBox_1.removeItem(comboBox_1.getSelectedItem());
-                     System.out.println(comboBox_1.getSelectedItem());
-                     //comboBox_1.(comboModel);	
-				 	 }
-                     
-                     
-				/*
-				for(String name : championNamesTeam){
-					if(name==comboBox_1.getSelectedItem()){
-						comboBox_1.removeAll();
-						}
-	
-				}*/
-				
-				
-			}
-		});
+		JComboBox comboBox_1 = new JComboBox();
+		for(String name : championNamesTeam){
+			comboBox_1.addItem(name);
+		}
 		comboBox_1.setBounds(36, 83, 106, 20);
+		comboBox_1.isEditable();
 		panelMainMenu.add(comboBox_1);
 		
-		JComboBox comboBox_2 = new JComboBox(championNamesTeam);
+		JComboBox comboBox_2 = new JComboBox();
+		for(String name : championNamesTeam){
+			comboBox_2.addItem(name);
+		}
 		comboBox_2.setBounds(36, 114, 106, 20);
 		panelMainMenu.add(comboBox_2);
 		
-		JComboBox comboBox_3 = new JComboBox(championNamesTeam);
+		JComboBox comboBox_3 = new JComboBox();
+		for(String name : championNamesTeam){
+			comboBox_3.addItem(name);
+		}
 		comboBox_3.setBounds(36, 145, 106, 20);
 		panelMainMenu.add(comboBox_3);
 		
-		JComboBox comboBox_4 = new JComboBox(championNamesTeam);
+		JComboBox comboBox_4 = new JComboBox();
+		for(String name : championNamesTeam){
+			comboBox_4.addItem(name);
+		}
 		comboBox_4.setBounds(36, 176, 106, 20);
 		panelMainMenu.add(comboBox_4);
 		
-		JComboBox comboBox_5 = new JComboBox(championNamesTeam);
+		JComboBox comboBox_5 = new JComboBox();
+		for(String name : championNamesTeam){
+			comboBox_5.addItem(name);
+		}
 		comboBox_5.setBounds(36, 207, 106, 20);
 		panelMainMenu.add(comboBox_5);
 		
-		JComboBox comboBox_6 = new JComboBox(championNamesEnemy);
+		JComboBox comboBox_6 = new JComboBox();
+		for(String name : championNamesEnemy){
+			comboBox_6.addItem(name);
+		}
 		comboBox_6.setBounds(518, 83, 106, 20);
 		panelMainMenu.add(comboBox_6);
 		
-		JComboBox comboBox_7 = new JComboBox(championNamesEnemy);
+		JComboBox comboBox_7 = new JComboBox();
+		for(String name : championNamesEnemy){
+			comboBox_7.addItem(name);
+		}
 		comboBox_7.setBounds(518, 114, 106, 20);
 		panelMainMenu.add(comboBox_7);
 		
-		JComboBox comboBox_8 = new JComboBox(championNamesEnemy);
+		JComboBox comboBox_8 = new JComboBox();
+		for(String name : championNamesEnemy){
+			comboBox_8.addItem(name);
+		}
 		comboBox_8.setBounds(518, 145, 106, 20);
 		panelMainMenu.add(comboBox_8);
 		
-		JComboBox comboBox_9 = new JComboBox(championNamesEnemy);
+		JComboBox comboBox_9 = new JComboBox();
+		for(String name : championNamesEnemy){
+			comboBox_9.addItem(name);
+		}
 		comboBox_9.setBounds(518, 176, 106, 20);
 		panelMainMenu.add(comboBox_9);
 		
-		JComboBox comboBox_10 = new JComboBox(championNamesEnemy);
+		JComboBox comboBox_10 = new JComboBox();
+		for(String name : championNamesEnemy){
+			comboBox_10.addItem(name);
+		}
 		comboBox_10.setBounds(518, 207, 106, 20);
 		panelMainMenu.add(comboBox_10);
+		
+		comboBox_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				if((String)comboBox_1.getSelectedItem()!=championNamesTeam[0]){
+				 comboBox_2.removeItem(comboBox_1.getSelectedItem());
+				 comboBox_3.removeItem(comboBox_1.getSelectedItem());
+				 comboBox_4.removeItem(comboBox_1.getSelectedItem());
+				 comboBox_5.removeItem(comboBox_1.getSelectedItem());
+				 comboBox_1.setVisible(false);
+				 textPane_1.setVisible(true);
+				 textPane_1.setText((String)comboBox_1.getSelectedItem());}
+			}
+		});
+		
+		comboBox_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				if((String)comboBox_2.getSelectedItem()!=championNamesTeam[0]){
+				 comboBox_3.removeItem(comboBox_2.getSelectedItem());
+				 comboBox_4.removeItem(comboBox_2.getSelectedItem());
+				 comboBox_5.removeItem(comboBox_2.getSelectedItem());
+				 comboBox_2.setVisible(false);
+				 textPane_2.setVisible(true);
+				 textPane_2.setText((String)comboBox_2.getSelectedItem());}
+			}
+		});
+		
+		comboBox_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				if((String)comboBox_3.getSelectedItem()!=championNamesTeam[0]){
+				 comboBox_4.removeItem(comboBox_3.getSelectedItem());
+				 comboBox_5.removeItem(comboBox_3.getSelectedItem());
+				 comboBox_3.setVisible(false);
+				 textPane_3.setVisible(true);
+				 textPane_3.setText((String)comboBox_3.getSelectedItem());}
+			}
+		});
+		
+		comboBox_4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				if((String)comboBox_4.getSelectedItem()!=championNamesTeam[0]){
+				 comboBox_5.removeItem(comboBox_4.getSelectedItem());
+				 comboBox_4.setVisible(false);
+				 textPane_4.setVisible(true);
+				 textPane_4.setText((String)comboBox_4.getSelectedItem());}
+			}
+		});
+		
+		comboBox_5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				if((String)comboBox_5.getSelectedItem()!=championNamesTeam[0]){
+				 comboBox_5.setVisible(false);
+				 textPane_5.setVisible(true);
+				 textPane_5.setText((String)comboBox_5.getSelectedItem());}
+			}
+		});
+		
+		comboBox_6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				if((String)comboBox_6.getSelectedItem()!=championNamesTeam[0]){
+				 comboBox_7.removeItem(comboBox_6.getSelectedItem());
+				 comboBox_8.removeItem(comboBox_6.getSelectedItem());
+				 comboBox_9.removeItem(comboBox_6.getSelectedItem());
+				 comboBox_10.removeItem(comboBox_6.getSelectedItem());
+				 comboBox_6.setVisible(false);
+				 textPane_6.setVisible(true);
+				 textPane_6.setText((String)comboBox_6.getSelectedItem());}
+			}
+		});
+		
+		comboBox_7.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				if((String)comboBox_7.getSelectedItem()!=championNamesTeam[0]){
+				 comboBox_8.removeItem(comboBox_7.getSelectedItem());
+				 comboBox_9.removeItem(comboBox_7.getSelectedItem());
+				 comboBox_10.removeItem(comboBox_7.getSelectedItem());
+				 comboBox_7.setVisible(false);
+				 textPane_7.setVisible(true);
+				 textPane_7.setText((String)comboBox_7.getSelectedItem());}
+			}
+		});
+		
+		comboBox_8.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				if((String)comboBox_8.getSelectedItem()!=championNamesTeam[0]){
+				 comboBox_9.removeItem(comboBox_8.getSelectedItem());
+				 comboBox_10.removeItem(comboBox_8.getSelectedItem());
+				 comboBox_8.setVisible(false);
+				 textPane_8.setVisible(true);
+				 textPane_8.setText((String)comboBox_8.getSelectedItem());}
+			}
+		});
+		
+		comboBox_9.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				if((String)comboBox_9.getSelectedItem()!=championNamesTeam[0]){
+				 comboBox_10.removeItem(comboBox_9.getSelectedItem());
+				 comboBox_9.setVisible(false);
+				 textPane_9.setVisible(true);
+				 textPane_9.setText((String)comboBox_9.getSelectedItem());}
+			}
+		});
+		
+		comboBox_10.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				if((String)comboBox_10.getSelectedItem()!=championNamesTeam[0]){
+				 comboBox_10.setVisible(false);
+				 textPane_10.setVisible(true);
+				 textPane_10.setText((String)comboBox_10.getSelectedItem());}
+			}
+		});
+		////
 		
 		lblNewLabel.setIcon(lblNewLabelImage);
 		lblNewLabel.setBounds(0, 0, 640, 480);
