@@ -1,9 +1,20 @@
 package Maps;
 
 public class MapList {
+	public Map hauntedMines = new Map();
+	public Map towersOfDoom = new Map();
+	public Map infernalShrines = new Map();
+	public Map battlefieldOfEternity = new Map();
+	public Map tombOfTheSpiderQueen = new Map();
+	public Map skyTemple = new Map();
+	public Map gardenOfTerror = new Map();
+	public Map blackheartsBay = new Map();
+	public Map dragonShire = new Map();
+	public Map cursedHollow = new Map();
+	public Map braxisHoldout = new Map();
+	public Map warheadJunction = new Map();
 	public MapList(){
 	// Haunted Mines
-	Map hauntedMines = new Map();
 	hauntedMines.setName("Haunted Mines");
 	hauntedMines.setLanes(0);
 	hauntedMines.setCoreHP(0);
@@ -18,7 +29,6 @@ public class MapList {
 	hauntedMines.setTowerHP(0);
 	hauntedMines.setTowers(0);
 	// Towers of Doom
-	Map towersOfDoom = new Map();
 	towersOfDoom.setName("Towers Of Dooms");
 	towersOfDoom.setLanes(0);
 	towersOfDoom.setCoreHP(0);
@@ -33,7 +43,6 @@ public class MapList {
 	towersOfDoom.setTowerHP(0);
 	towersOfDoom.setTowers(0);
 	// Infernal Shrines
-	Map infernalShrines = new Map();
 	infernalShrines.setName("Infernal Shrines");
 	infernalShrines.setLanes(0);
 	infernalShrines.setCoreHP(0);
@@ -48,7 +57,6 @@ public class MapList {
 	infernalShrines.setTowerHP(0);
 	infernalShrines.setTowers(0);
 	// Battlefield Of Eternity
-	Map battlefieldOfEternity = new Map();
 	battlefieldOfEternity.setName("Battlefield Of Eternity");
 	battlefieldOfEternity.setLanes(0);
 	battlefieldOfEternity.setCoreHP(0);
@@ -63,8 +71,6 @@ public class MapList {
 	battlefieldOfEternity.setTowerHP(0);
 	battlefieldOfEternity.setTowers(0);
 	// Tomb Of The Spider Queen
-	Map tombOfTheSpiderQueen = new Map();
-	tombOfTheSpiderQueen.setName("Tomb Of The Spider Queen");
 	tombOfTheSpiderQueen.setLanes(0);
 	tombOfTheSpiderQueen.setCoreHP(0);
 	tombOfTheSpiderQueen.setCoreShieldHP(0);
@@ -78,7 +84,6 @@ public class MapList {
 	tombOfTheSpiderQueen.setTowerHP(0);
 	tombOfTheSpiderQueen.setTowers(0);
 	// Sky Temple
-	Map skyTemple = new Map();
 	skyTemple.setName("Sky Temple");
 	skyTemple.setLanes(0);
 	skyTemple.setCoreHP(0);
@@ -93,7 +98,6 @@ public class MapList {
 	skyTemple.setTowerHP(0);
 	skyTemple.setTowers(0);
 	// Gareden of Terror
-	Map gardenOfTerror = new Map();
 	gardenOfTerror.setName("Gareden of Terror");
 	gardenOfTerror.setLanes(0);
 	gardenOfTerror.setCoreHP(0);
@@ -108,7 +112,6 @@ public class MapList {
 	gardenOfTerror.setTowerHP(0);
 	gardenOfTerror.setTowers(0);
 	// Blackheart's Bay
-	Map blackheartsBay = new Map();
 	blackheartsBay.setName("Blackheart's Bay");
 	blackheartsBay.setLanes(0);
 	blackheartsBay.setCoreHP(0);
@@ -123,7 +126,6 @@ public class MapList {
 	blackheartsBay.setTowerHP(0);
 	blackheartsBay.setTowers(0);
 	// Dragon Shire
-	Map dragonShire = new Map();
 	dragonShire.setName("Dragon Shire");
 	dragonShire.setLanes(0);
 	dragonShire.setCoreHP(0);
@@ -138,7 +140,6 @@ public class MapList {
 	dragonShire.setTowerHP(0);
 	dragonShire.setTowers(0);
 	// Cursed Hollow
-	Map cursedHollow = new Map();
 	cursedHollow.setName("Cursed Hollow");
 	cursedHollow.setLanes(0);
 	cursedHollow.setCoreHP(0);
@@ -153,7 +154,6 @@ public class MapList {
 	cursedHollow.setTowerHP(0);
 	cursedHollow.setTowers(0);
 	// Braxis Holdout
-	Map braxisHoldout = new Map();
 	braxisHoldout.setName("Braxis Holdout");
 	braxisHoldout.setLanes(0);
 	braxisHoldout.setCoreHP(0);
@@ -168,7 +168,6 @@ public class MapList {
 	braxisHoldout.setTowerHP(0);
 	braxisHoldout.setTowers(0);
 	// Warhead Junction
-	Map warheadJunction = new Map();
 	warheadJunction.setName("Warhead Junction");
 	warheadJunction.setLanes(0);
 	warheadJunction.setCoreHP(0);
@@ -182,8 +181,7 @@ public class MapList {
 	warheadJunction.setKeeps(0);
 	warheadJunction.setTowerHP(0);
 	warheadJunction.setTowers(0);
-
-		
 	
 	}
+	
 }

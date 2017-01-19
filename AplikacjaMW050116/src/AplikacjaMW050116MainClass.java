@@ -672,6 +672,8 @@ public class AplikacjaMW050116MainClass {
 				addBackgroundMap(btnTowersOfDoom.getName());
 				labelButton6.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/Button_Off.png")));
 				label.setIcon(labelImage);
+				MapList mapy = new MapList();
+				System.out.println(mapy.hauntedMines.getName());
 			}
 			public void mouseExited(MouseEvent arg0) {
 				addBackgroundMap(btnTowersOfDoom.getName());
