@@ -91,9 +91,9 @@ public class AplikacjaMW050116MainClass {
 		frmNoTitleYet.getContentPane().add(panelMenuInfo, "name_470414835695040");
 		panelMenuInfo.setLayout(null);
 		
-		JButton btnNewButton = new JButton("New button");
-		btnNewButton.setBounds(122, 75, 321, 181);
-		panelMenuInfo.add(btnNewButton);
+		JLabel lblNewLabel_1 = new JLabel("New label");
+		lblNewLabel_1.setBounds(0, 0, 640, 480);
+		panelMenuInfo.add(lblNewLabel_1);
 		panelMenuInfo.setVisible(false);
 		
 		JLabel labelButtonChooseMap = new JLabel("");
@@ -166,6 +166,7 @@ public class AplikacjaMW050116MainClass {
 			public void actionPerformed(ActionEvent e) {
 				panelMainMenu.setVisible(false);
 				panelMenuInfo.setVisible(true);
+				lblNewLabel_1.setIcon(lblNewLabelImage);
 			}
 		});
 		btnDONE.setBounds(226, 114, 160, 40);
