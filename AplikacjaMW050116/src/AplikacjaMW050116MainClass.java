@@ -455,6 +455,7 @@ public class AplikacjaMW050116MainClass {
 						}
 					}
 				});
+				frmNoTitleYet.setVisible(false);
 			}
 		});
 		
