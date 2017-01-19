@@ -101,6 +101,11 @@ public class AplikacjaMW050116MainClass {
 		frmNoTitleYet.getContentPane().add(panelMenuInfo, "name_470414835695040");
 		panelMenuInfo.setLayout(null);
 		
+		JLabel labeltextPane_13 = new JLabel("");
+		labeltextPane_13.setIcon(new ImageIcon(AplikacjaMW050116MainClass.class.getResource("/resources/skillMenu_v2.png")));
+		labeltextPane_13.setBounds(49, 321, 540, 120);
+		panelMenuInfo.add(labeltextPane_13);
+		
 		JTextField textPane_13 = new JTextField();
 		textPane_13.setHorizontalAlignment(SwingConstants.CENTER);
 		textPane_13.setBounds(49, 321, 540, 120);
